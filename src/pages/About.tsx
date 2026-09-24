@@ -9,7 +9,7 @@ const copy = {
     eyebrow: "За нас",
     heading: "За Smart Data Management",
     intro:
-      "Изградихме инструмента, който искахме да съществува, модерна облачна платформа за счетоводство, фактуриране и бизнес управление, разработена с практиков опит в счетоводни, административни и търговски процеси.",
+      "Създадохме SDM, защото искахме облачна система за счетоводство, фактуриране и управление, която наистина пасва на българската практика. Зад нея стои опит в счетоводни, административни и търговски процеси.",
     storyEyebrow: "История",
     storyTitle: "Нашата история",
     storyParagraphs: [
@@ -25,22 +25,22 @@ const copy = {
     missionEyebrow: "Мисия",
     missionTitle: "Нашата мисия",
     missionDescription:
-      "Да направим модерното, съответстващо счетоводство достъпно за всяка фирма в България, независимо от размера й, чрез платформа, изградена от практикуващи счетоводители.",
+      "Да направим съвременното счетоводство достъпно за всяка българска фирма, независимо от размера ѝ, със система, създадена с участието на практикуващи счетоводители.",
     values: [
       {
         icon: Target,
         title: "Точност преди всичко",
-        desc: "Счетоводството изисква прецизност. Всеки модул е изграден да работи правилно от самото начало, не приблизително, а точно.",
+        desc: "В счетоводството „почти вярно“ не върши работа. Затова държим всяка сума, всяко правило и всяка справка да бъдат точни.",
       },
       {
         icon: Flag,
-        title: "Местна съответственост",
-        desc: "Изградени сме специално за България. НСС, ЗДДС, НАП, не като добавка, а като основа на платформата.",
+        title: "Създадено за България",
+        desc: "НСС, ЗДДС и изискванията на НАП не са добавка към системата, а нейната основа.",
       },
       {
         icon: TrendingUp,
-        title: "Мащаб без сложност",
-        desc: "Нашите клиенти трябва да могат да растат без да нарастват разходите или сложността на инструментите им.",
+        title: "Без излишна сложност",
+        desc: "Когато фирмата расте, системата трябва да остане също толкова ясна, а разходите предвидими.",
       },
     ],
     teamTitle: "Екипът",
@@ -52,7 +52,7 @@ const copy = {
     eyebrow: "About us",
     heading: "About Smart Data Management",
     intro:
-      "We built the tool we wished existed, a modern cloud platform for accounting, invoicing, and business management, developed with hands-on experience in accounting, administrative, and business processes.",
+      "We built SDM because we wanted a cloud system for accounting, invoicing and management that really fits Bulgarian practice. Behind it is hands-on experience in accounting, administrative and business processes.",
     storyEyebrow: "History",
     storyTitle: "Our story",
     storyParagraphs: [
@@ -68,22 +68,22 @@ const copy = {
     missionEyebrow: "Mission",
     missionTitle: "Our mission",
     missionDescription:
-      "To make modern, compliant accounting accessible to every business in Bulgaria, regardless of size, through a platform built by practicing accountants.",
+      "To make modern accounting accessible to every Bulgarian company, whatever its size, with a system built together with practising accountants.",
     values: [
       {
         icon: Target,
         title: "Accuracy above all",
-        desc: "Accounting demands precision. Every module is built to work correctly from the start, not approximately, but exactly.",
+        desc: "In accounting, almost right is not good enough. So we make sure every amount, every rule and every report is exact.",
       },
       {
         icon: Flag,
-        title: "Local compliance",
-        desc: "We're built specifically for Bulgaria. National Accounting Standards, VAT, NRA, not as an add-on, but as the foundation of the platform.",
+        title: "Made for Bulgaria",
+        desc: "The local accounting standards, the VAT Act and NRA requirements are not an add-on to the system but its foundation.",
       },
       {
         icon: TrendingUp,
-        title: "Scale without complexity",
-        desc: "Our customers should be able to grow without growing the cost or complexity of their tools.",
+        title: "No needless complexity",
+        desc: "As a company grows, the system should stay just as clear and the costs predictable.",
       },
     ],
     teamTitle: "The team",

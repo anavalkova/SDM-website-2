@@ -6,8 +6,8 @@ import { useT } from "@/i18n/LanguageProvider";
 const copy = {
   bg: {
     eyebrow: "Как работи",
-    heading: "От регистрация до работа за един ден",
-    intro: "Следвайте четири стъпки и ще имате напълно конфигурирано счетоводно работно пространство.",
+    heading: "Как да започнете",
+    intro: "Четири стъпки от регистрацията до първия издаден документ.",
     faqHeading: "Често задавани въпроси",
     steps: [
       {
@@ -23,7 +23,7 @@ const copy = {
       {
         step: 3,
         title: "Поканете екипа си",
-        desc: "Добавете потребители, задайте роли и права по фирма и по модул.",
+        desc: "Добавете потребители и им задайте роли и права.",
       },
       {
         step: 4,
@@ -56,8 +56,8 @@ const copy = {
   },
   en: {
     eyebrow: "How it works",
-    heading: "From sign-up to fully operational in one day",
-    intro: "Follow four steps and you'll have a fully configured accounting workspace.",
+    heading: "How to get started",
+    intro: "Four steps from signing up to your first issued document.",
     faqHeading: "Frequently asked questions",
     steps: [
       {
@@ -73,7 +73,7 @@ const copy = {
       {
         step: 3,
         title: "Invite your team",
-        desc: "Add users, and assign roles and permissions per company and per module.",
+        desc: "Add users and give them roles and permissions.",
       },
       {
         step: 4,

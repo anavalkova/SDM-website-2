@@ -4,13 +4,13 @@ import { useT } from "@/i18n/LanguageProvider";
 
 const fallback = {
   bg: {
-    title: "Готови да започнете?",
-    description: "90 дни безплатно. Без кредитна карта. Помагаме ви с настройката.",
+    title: "Опитайте SDM безплатно",
+    description: "Първите 90 дни са безплатни и не е нужна кредитна карта. Помагаме ви с първоначалната настройка.",
     primary: "Започнете безплатно",
   },
   en: {
-    title: "Ready to get started?",
-    description: "90 days free. No credit card. We help you set up.",
+    title: "Try SDM for free",
+    description: "The first 90 days are free and no credit card is needed. We help you with the initial setup.",
     primary: "Start free",
   },
 };

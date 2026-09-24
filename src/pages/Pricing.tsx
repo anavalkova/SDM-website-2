@@ -62,7 +62,7 @@ const copy = {
     ],
     includedTitle: "Всички пакети включват",
     includedDescription:
-      "Независимо от избрания пакет, платформата остава една и съща, облачна, съответстваща и без скрити условия.",
+      "Системата е една и съща във всички пакети: работи в облака, следва НСС и изискванията на НАП и няма скрити условия.",
     includedItems: [
       ["90 дни безплатно", "Пълен достъп по време на пробния период, без кредитна карта."],
       ["Данни в ЕС · GDPR", "Европейска инфраструктура и съхранение на данните в ЕС."],
@@ -132,7 +132,7 @@ const copy = {
     ],
     includedTitle: "All plans include",
     includedDescription:
-      "No matter which plan you choose, the platform stays the same, cloud-based, compliant, and free of hidden terms.",
+      "The system is the same on every plan: it runs in the cloud, follows the local standards and NRA requirements, and has no hidden terms.",
     includedItems: [
       ["90 days free", "Full access throughout the trial, no credit card required."],
       ["Data in the EU · GDPR", "European infrastructure with all data stored in the EU."],

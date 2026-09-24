@@ -16,17 +16,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
   bg: [
     {
       title: "Фактуриране",
-      value: "Издавате фактурата и тя вече е в счетоводството.",
+      value: "Издадената фактура се осчетоводява, без да я въвеждате втори път.",
       points: [
         "Фактури, кредитни и дебитни известия с автоматична номерация",
         "Номенклатура на артикули и услуги, ценови листи, отстъпки по ред",
         "Фактури в евро или в друга валута по курс",
-        "Готов PDF на всеки издаден документ",
+        "PDF на всеки издаден документ",
       ],
     },
     {
       title: "Покупки, продажби, банка и каса",
-      value: "Всеки документ отива в своя журнал, със статия, която се предлага сама.",
+      value: "Всеки вид документ има свой журнал, а системата предлага статията.",
       points: [
         "Журнали за доставчици, клиенти, банка, каса и мемориални ордери",
         "Статии 1:1 или една сметка срещу много насрещни",
@@ -36,17 +36,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Сметкоплан и аналитичност",
-      value: "Започвате със сметкоплан по НСС, не с празна таблица.",
+      value: "Сметкопланът по НСС е готов още при създаването на годината.",
       points: [
         "Сметкоплан по групи 1–9, зареден при създаване на годината",
         "Аналитичности по контрагент, фактура, артикул, служител",
         "Начални салда, ръчно или от файл",
-        "Прехвърляне на контрагенти и салда от стара система чрез CSV",
+        "Контрагенти и салда от предишната система, заредени от CSV файл",
       ],
     },
     {
       title: "ДДС и НАП",
-      value: "Дневниците се попълват сами от документите.",
+      value: "Дневниците за продажби и покупки се попълват от въведените документи.",
       points: [
         "Дневник на продажбите и дневник на покупките",
         "Справка-декларация по ЗДДС и VIES декларация",
@@ -56,17 +56,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Справки и табло",
-      value: "Кой ви дължи и на кого дължите към днешна дата, а не към края на месеца.",
+      value: "Виждате вземанията и задълженията си към всяка дата.",
       points: [
         "Табло с вземания, задължения и основните контрагенти",
         "Оборотна ведомост, хронология и главна книга",
-        "Всяка операция води до документа, от който идва",
+        "От всяка операция стигате до нейния документ",
         "Експорт на всяка таблица",
       ],
     },
     {
-      title: "Фирми, екип и права",
-      value: "Няколко фирми, един екип, ясно кой какво може.",
+      title: "Фирми, потребители и права",
+      value: "Определяте кой какво може да прави в системата.",
       points: [
         "Потребители, групи и роли",
         "Права за всяко действие: въвеждане, осчетоводяване, справки",
@@ -78,17 +78,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
   en: [
     {
       title: "Invoicing",
-      value: "Issue the invoice and it is already in your books.",
+      value: "An issued invoice is posted without you entering it a second time.",
       points: [
         "Invoices, credit and debit notes with automatic numbering",
         "Item and service catalogue, price lists, line discounts",
         "Invoices in euro or in another currency at a set rate",
-        "A ready PDF for every issued document",
+        "A PDF of every issued document",
       ],
     },
     {
       title: "Purchases, sales, bank and cash",
-      value: "Every document goes to its own journal, with the entry proposed for you.",
+      value: "Each kind of document has its own journal, and the system suggests the entry.",
       points: [
         "Journals for suppliers, customers, bank, cash and memorial orders",
         "1:1 entries or one account against many",
@@ -98,17 +98,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Chart of accounts and analytics",
-      value: "Start with a National Accounting Standards chart of accounts, not a blank sheet.",
+      value: "The chart of accounts is ready as soon as the year is created.",
       points: [
         "Chart of accounts in groups 1–9, loaded when the year is created",
         "Analytics by counterparty, invoice, item and employee",
         "Opening balances, entered by hand or from a file",
-        "Move counterparties and balances from your old system via CSV",
+        "Counterparties and balances from your previous system, loaded from a CSV file",
       ],
     },
     {
       title: "VAT and the NRA",
-      value: "The VAT journals fill themselves from your documents.",
+      value: "The sales and purchase VAT journals are filled in from your documents.",
       points: [
         "Sales and purchase VAT journals",
         "VAT return and VIES declaration",
@@ -118,17 +118,17 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Reports and dashboard",
-      value: "Who owes you and whom you owe, as of today rather than month-end.",
+      value: "See your receivables and payables as of any date.",
       points: [
         "Dashboard with receivables, payables and top counterparties",
         "Trial balance, chronology and general ledger",
-        "Every entry leads back to the document it came from",
+        "From any entry you can open its document",
         "Export of any table",
       ],
     },
     {
-      title: "Companies, team and permissions",
-      value: "Several companies, one team, clear rules on who can do what.",
+      title: "Companies, users and permissions",
+      value: "You decide who can do what in the system.",
       points: [
         "Users, groups and roles",
         "Permissions per action: entry, posting, reports",
