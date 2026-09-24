@@ -11,7 +11,7 @@ const copy = {
     eyebrow: "Ценови пакети",
     heading: "Ясни пакети. Предвидими цени.",
     subheading:
-      "Четири пакета около нивото на автоматизация, което вашият бизнес реално изисква. Включват 90-дневен безплатен пробен период. Без кредитна карта.",
+      "Четири пакета около нивото на автоматизация, което вашият бизнес реално изисква. Всички включват 90-дневен безплатен пробен период.",
     popular: "Най-популярен",
     getStarted: "Започнете",
     plans: [
@@ -64,7 +64,7 @@ const copy = {
     includedDescription:
       "Системата е една и съща във всички пакети: работи в облака, следва НСС и изискванията на НАП и няма скрити условия.",
     includedItems: [
-      ["90 дни безплатно", "Пълен достъп по време на пробния период, без кредитна карта."],
+      ["90 дни безплатно", "Пълен достъп до системата по време на пробния период."],
       ["Данни в ЕС · GDPR", "Европейска инфраструктура и съхранение на данните в ЕС."],
       ["НСС и НАП формати", "Сметкоплан, ДДС дневници и декларации в правилния формат."],
     ],
@@ -76,7 +76,7 @@ const copy = {
     eyebrow: "Pricing plans",
     heading: "Clear plans. Predictable pricing.",
     subheading:
-      "Four plans built around the level of automation your business actually needs. All plans include a 90-day free trial. No credit card required.",
+      "Four plans built around the level of automation your business actually needs. All plans include a 90-day free trial.",
     popular: "Most popular",
     getStarted: "Get started",
     plans: [
@@ -134,7 +134,7 @@ const copy = {
     includedDescription:
       "The system is the same on every plan: it runs in the cloud, follows the local standards and NRA requirements, and has no hidden terms.",
     includedItems: [
-      ["90 days free", "Full access throughout the trial, no credit card required."],
+      ["90 days free", "Full access to the system throughout the trial."],
       ["Data in the EU · GDPR", "European infrastructure with all data stored in the EU."],
       ["National Accounting Standards & NRA formats", "Chart of accounts, VAT ledgers, and declarations in the correct format."],
     ],

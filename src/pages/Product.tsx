@@ -32,7 +32,7 @@ const copy = {
     ],
     ctaTitle: "Искате ли да видите как работи?",
     ctaDesc:
-      "Ще ви покажем системата, ще ви помогнем да прехвърлите контрагентите и началните салда и ще ви препоръчаме подходящ пакет. Първите 90 дни са безплатни, без кредитна карта.",
+      "Ще ви покажем системата, ще ви помогнем да прехвърлите контрагентите и началните салда и ще ви препоръчаме подходящ пакет. Първите 90 дни са безплатни.",
     ctaPrimary: "Свържете се с нас",
     ctaSecondary: "Вижте пакетите",
   },
@@ -61,7 +61,7 @@ const copy = {
     ],
     ctaTitle: "Want to see how it works?",
     ctaDesc:
-      "We will walk you through the system, help you move your counterparties and opening balances across, and recommend the right plan. 90 days free, no credit card.",
+      "We will walk you through the system, help you move your counterparties and opening balances across, and recommend the right plan. The first 90 days are free.",
     ctaPrimary: "Contact us",
     ctaSecondary: "See pricing",
   },

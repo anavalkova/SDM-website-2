@@ -29,8 +29,8 @@ const copy = {
       { icon: Clock, label: "Работно време", value: "Пон–Пет, 9:00–18:00 ч." },
     ],
     demoTitle: "Искате демо на платформата?",
-    demoDescription: "90 дни безплатно, без кредитна карта, без ангажимент. Свързваме се с вас и настройваме профила заедно.",
-    demoBadges: ["90 дни безплатно", "Без кредитна карта", "Пълен достъп"],
+    demoDescription: "90 дни безплатно и без ангажимент. Свързваме се с вас и настройваме профила заедно.",
+    demoBadges: ["90 дни безплатно", "Без ангажимент", "Пълен достъп"],
   },
   en: {
     eyebrow: "Contact",
@@ -52,8 +52,8 @@ const copy = {
       { icon: Clock, label: "Business hours", value: "Mon–Fri, 9:00 AM–6:00 PM" },
     ],
     demoTitle: "Want a platform demo?",
-    demoDescription: "90 days free, no credit card, no commitment. We get in touch and set the account up with you.",
-    demoBadges: ["90 days free", "No credit card", "Full access"],
+    demoDescription: "90 days free and no commitment. We get in touch and set the account up with you.",
+    demoBadges: ["90 days free", "No commitment", "Full access"],
   },
 };
 
