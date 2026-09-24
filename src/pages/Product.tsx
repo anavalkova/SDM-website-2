@@ -10,14 +10,14 @@ const copy = {
   bg: {
     eyebrow: "Решения",
     title: "Едно място за документите, счетоводството и ДДС.",
-    lead: "Шест модула, които работят върху едни и същи данни. Въвеждате веднъж — фактурата, статията, дневникът и справката се попълват от същия запис.",
+    lead: "Шест модула, които работят върху едни и същи данни. Въвеждате веднъж, а фактурата, статията, дневникът и справката се попълват от същия запис.",
     activeEyebrow: "Налично сега",
     activeTitle: "Какво можете да правите в SDM",
     packageNote: "Обхватът на някои функции зависи от пакета.",
     packageLink: "Сравнете пакетите",
     soonEyebrow: "В разработка",
     soonTitle: "Какво предстои",
-    soonDesc: "Новите модули се включват в работното ви пространство при пускането им — без миграция и без нова настройка.",
+    soonDesc: "Новите модули се включват в работното ви пространство при пускането им, без миграция и без нова настройка.",
     upcoming: [
       ["Разпознаване на фактури", "Качвате PDF или снимка на фактура за покупка и получавате чернова за преглед."],
       ["Автоматична връзка с банката", "Транзакциите идват директно от банката и се съпоставят по правила."],
@@ -35,14 +35,14 @@ const copy = {
   en: {
     eyebrow: "Solutions",
     title: "One place for your documents, your books and VAT.",
-    lead: "Six modules working on the same data. Enter something once — the invoice, the entry, the VAT journal and the report all come from the same record.",
+    lead: "Six modules working on the same data. Enter something once, and the invoice, the entry, the VAT journal and the report all come from the same record.",
     activeEyebrow: "Available now",
     activeTitle: "What you can do in SDM",
     packageNote: "The scope of some features depends on your plan.",
     packageLink: "Compare plans",
     soonEyebrow: "In development",
     soonTitle: "What's next",
-    soonDesc: "New modules appear in your workspace when they are released — no migration and no new setup.",
+    soonDesc: "New modules appear in your workspace when they are released, with no migration and no new setup.",
     upcoming: [
       ["Invoice recognition", "Upload a PDF or a photo of a purchase invoice and get a draft to review."],
       ["Direct bank connection", "Transactions arrive straight from the bank and are matched by rules."],

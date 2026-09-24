@@ -40,7 +40,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
       points: [
         "Сметкоплан по групи 1–9, зареден при създаване на годината",
         "Аналитичности по контрагент, фактура, артикул, служител",
-        "Начални салда — ръчно или от файл",
+        "Начални салда, ръчно или от файл",
         "Прехвърляне на контрагенти и салда от стара система чрез CSV",
       ],
     },
@@ -56,7 +56,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Справки и табло",
-      value: "Кой ви дължи и на кого дължите — към днешна дата, не към края на месеца.",
+      value: "Кой ви дължи и на кого дължите към днешна дата, а не към края на месеца.",
       points: [
         "Табло с вземания, задължения и основните контрагенти",
         "Оборотна ведомост, хронология и главна книга",
@@ -69,7 +69,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
       value: "Няколко фирми, един екип, ясно кой какво може.",
       points: [
         "Потребители, групи и роли",
-        "Права за всяко действие — въвеждане, осчетоводяване, справки",
+        "Права за всяко действие: въвеждане, осчетоводяване, справки",
         "Отделни данни за всяка фирма и всяка фискална година",
         "Смяна на фирмата без повторен вход",
       ],
@@ -118,7 +118,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "Reports and dashboard",
-      value: "Who owes you and whom you owe — as of today, not month-end.",
+      value: "Who owes you and whom you owe, as of today rather than month-end.",
       points: [
         "Dashboard with receivables, payables and top counterparties",
         "Trial balance, chronology and general ledger",
@@ -131,7 +131,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
       value: "Several companies, one team, clear rules on who can do what.",
       points: [
         "Users, groups and roles",
-        "Permissions per action — entry, posting, reports",
+        "Permissions per action: entry, posting, reports",
         "Separate data for every company and every financial year",
         "Switch company without signing in again",
       ],

@@ -18,7 +18,7 @@ const copy = {
       {
         step: 2,
         title: "Настройте работното пространство",
-        desc: "Въведете данните на фирмата и създайте фискалната година — сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично. Контрагентите и началните салда можете да заредите от файл. При пакет Бизнес добавете и останалите фирми.",
+        desc: "Въведете данните на фирмата и създайте фискалната година. Сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично. Контрагентите и началните салда можете да заредите от файл. При пакет Бизнес добавете и останалите фирми.",
       },
       {
         step: 3,
@@ -68,7 +68,7 @@ const copy = {
       {
         step: 2,
         title: "Set up your workspace",
-        desc: "Enter your company details and create the financial year — the chart of accounts, journals and analytics load automatically. Counterparties and opening balances can be loaded from a file. On the Business plan, add your other companies too.",
+        desc: "Enter your company details and create the financial year. The chart of accounts, journals and analytics load automatically. Counterparties and opening balances can be loaded from a file. On the Business plan, add your other companies too.",
       },
       {
         step: 3,

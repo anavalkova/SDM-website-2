@@ -26,7 +26,7 @@ const copy = {
     contactItems: [
       { icon: Mail, label: "Имейл", value: "info@smartdatamanagement.bg" },
       { icon: MapPin, label: "Адрес", value: "София, България" },
-      { icon: Clock, label: "Работно време", value: "Пон – Пет, 9:00 – 18:00 ч." },
+      { icon: Clock, label: "Работно време", value: "Пон–Пет, 9:00–18:00 ч." },
     ],
     demoTitle: "Искате демо на платформата?",
     demoDescription: "90 дни безплатно, без кредитна карта, без ангажимент. Свързваме се с вас и настройваме профила заедно.",
@@ -49,7 +49,7 @@ const copy = {
     contactItems: [
       { icon: Mail, label: "Email", value: "info@smartdatamanagement.bg" },
       { icon: MapPin, label: "Address", value: "Sofia, Bulgaria" },
-      { icon: Clock, label: "Business hours", value: "Mon – Fri, 9:00 AM – 6:00 PM" },
+      { icon: Clock, label: "Business hours", value: "Mon–Fri, 9:00 AM–6:00 PM" },
     ],
     demoTitle: "Want a platform demo?",
     demoDescription: "90 days free, no credit card, no commitment. We get in touch and set the account up with you.",

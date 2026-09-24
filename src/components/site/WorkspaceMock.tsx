@@ -38,7 +38,7 @@ const copy = {
       { code: "401", name: "Задължения към доставчици" },
       { code: "402", name: "Вземания от доставчици по аванси" },
       { code: "403", name: "Задължения към доставчици по търговски кредити" },
-      { code: "405", name: "Задължения към доставчици – свързани лица" },
+      { code: "405", name: "Задължения към доставчици, свързани лица" },
       { code: "409", name: "Други задължения към доставчици" },
     ],
     rest: [
@@ -73,7 +73,7 @@ const copy = {
       { code: "401", name: "Payables to suppliers" },
       { code: "402", name: "Receivables from suppliers on advances" },
       { code: "403", name: "Payables to suppliers on trade credits" },
-      { code: "405", name: "Payables to suppliers – related parties" },
+      { code: "405", name: "Payables to suppliers, related parties" },
       { code: "409", name: "Other payables to suppliers" },
     ],
     rest: [
