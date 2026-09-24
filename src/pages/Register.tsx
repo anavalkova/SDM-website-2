@@ -19,8 +19,8 @@ const copy = {
     choosePlan: "Изберете пакет",
     plans: [
       { value: "starter", label: "Стартер" },
+      { value: "standard", label: "Стандарт" },
       { value: "business", label: "Бизнес" },
-      { value: "practice", label: "Практика" },
       { value: "enterprise", label: "Корпоративен" },
     ],
     submit: "Създайте акаунт",
@@ -45,8 +45,8 @@ const copy = {
     choosePlan: "Choose a plan",
     plans: [
       { value: "starter", label: "Starter" },
+      { value: "standard", label: "Standard" },
       { value: "business", label: "Business" },
-      { value: "practice", label: "Practice" },
       { value: "enterprise", label: "Enterprise" },
     ],
     submit: "Create account",

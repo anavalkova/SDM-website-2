@@ -9,13 +9,13 @@ const copy = {
     eyebrow: "За нас",
     heading: "За Smart Data Management",
     intro:
-      "Изградихме инструмента, който исках да съществува, модерна облачна платформа за счетоводство, фактуриране и бизнес управление, разработена с практиков опит в счетоводни, административни и търговски процеси.",
+      "Изградихме инструмента, който искахме да съществува, модерна облачна платформа за счетоводство, фактуриране и бизнес управление, разработена с практиков опит в счетоводни, административни и търговски процеси.",
     storyEyebrow: "История",
     storyTitle: "Нашата история",
     storyParagraphs: [
       "Smart Data Management се роди от реален проблем: счетоводните кантори в България разчитат на остарели десктоп системи, изискващи локална инсталация и ИТ поддръжка, или на международни облачни инструменти, непригодени за НСС и НАП форматите.",
       "Решихме да изградим нещо по-добро, облачна платформа, в която сметкопланът следва НСС, ДДС дневниците са в правилния НАП формат, а VIES декларацията е вградена. Без конфигурация. Работи правилно от самото начало.",
-      "Днес SDM обслужва счетоводни кантори и бизнеси в цяла България, с данни, съхранявани в европейска инфраструктура в пълно съответствие с GDPR.",
+      "Днес работим с първите кантори и фирми, които ползват SDM преди официалния старт. Данните им се съхраняват в европейска инфраструктура, в съответствие с GDPR.",
     ],
     stats: [
       ["2024", "Година на основаване"],
@@ -58,7 +58,7 @@ const copy = {
     storyParagraphs: [
       "Smart Data Management was born out of a real problem: accounting firms in Bulgaria rely on outdated desktop systems that require local installation and IT support, or on international cloud tools that aren't built for National Accounting Standards and NRA formats.",
       "We decided to build something better, a cloud platform where the chart of accounts follows National Accounting Standards, VAT ledgers are in the correct NRA format, and VIES declarations are built in. No configuration needed. It works correctly from day one.",
-      "Today, SDM serves accounting firms and businesses across Bulgaria, with data stored on European infrastructure in full GDPR compliance.",
+      "Today we work with the first accounting firms and companies using SDM ahead of the official launch. Their data is stored on European infrastructure, GDPR compliant.",
     ],
     stats: [
       ["2024", "Year founded"],

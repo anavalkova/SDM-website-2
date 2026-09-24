@@ -5,12 +5,12 @@ import { useT } from "@/i18n/LanguageProvider";
 const fallback = {
   bg: {
     title: "Готови да започнете?",
-    description: "90 дни безплатно. Без кредитна карта. Ние ви въвеждаме лично в системата.",
+    description: "90 дни безплатно. Без кредитна карта. Помагаме ви с настройката.",
     primary: "Започнете безплатно",
   },
   en: {
     title: "Ready to get started?",
-    description: "90 days free. No credit card. We onboard you personally.",
+    description: "90 days free. No credit card. We help you set up.",
     primary: "Start free",
   },
 };

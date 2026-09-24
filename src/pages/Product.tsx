@@ -1,237 +1,68 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/site/SectionHeading";
 import ModuleCard from "@/components/site/ModuleCard";
 import CtaBand from "@/components/site/CtaBand";
-import TrustBar from "@/components/site/TrustBar";
-import { useT } from "@/i18n/LanguageProvider";
+import { useLang, useT } from "@/i18n/LanguageProvider";
+import { getModules } from "@/content/modules";
 
 const copy = {
   bg: {
-    eyebrow: "Продукт",
-    title: "Продукт и решения",
-    lead: "Пълна функционалност за счетоводство, фактуриране и финансово управление, в едно работно пространство.",
-    activeEyebrow: "● Налични сега",
-    activeTitle: "Активни модули",
-    activeDesc: "Готови за употреба от първия ден. Изградени по Националните счетоводни стандарти на България.",
-    soonEyebrow: "⚙ В активна разработка",
-    soonTitle: "Предстоящи модули",
-    soonDesc: "Достъпни автоматично при публикуване, без допълнителна настройка или миграция.",
-    ctaTitle: "Заинтересовани? Свържете се с нас.",
+    eyebrow: "Решения",
+    title: "Едно място за документите, счетоводството и ДДС.",
+    lead: "Шест модула, които работят върху едни и същи данни. Въвеждате веднъж — фактурата, статията, дневникът и справката се попълват от същия запис.",
+    activeEyebrow: "Налично сега",
+    activeTitle: "Какво можете да правите в SDM",
+    packageNote: "Обхватът на някои функции зависи от пакета.",
+    packageLink: "Сравнете пакетите",
+    soonEyebrow: "В разработка",
+    soonTitle: "Какво предстои",
+    soonDesc: "Новите модули се включват в работното ви пространство при пускането им — без миграция и без нова настройка.",
+    upcoming: [
+      ["Разпознаване на фактури", "Качвате PDF или снимка на фактура за покупка и получавате чернова за преглед."],
+      ["Автоматична връзка с банката", "Транзакциите идват директно от банката и се съпоставят по правила."],
+      ["Дълготрайни активи", "Регистър на активите и автоматично начисляване на амортизации."],
+      ["Заплати и ТРЗ", "Заплати, фишове и декларации към НАП."],
+      ["Склад", "Наличности, стокови разписки и оценка на запасите."],
+      ["API и интеграции", "Връзка с онлайн магазини, ERP и вътрешни системи."],
+    ],
+    ctaTitle: "Вижте SDM с вашите данни",
     ctaDesc:
-      "Ще ви покажем платформата, ще отговорим на въпросите ви и ще предложим пакета, подходящ за вашия случай. 90 дни безплатен пробен период, без кредитна карта.",
+      "Ще ви покажем системата, ще ви помогнем да прехвърлите контрагентите и началните салда и ще предложим подходящия пакет. 90 дни безплатно, без кредитна карта.",
     ctaPrimary: "Свържете се с нас",
     ctaSecondary: "Вижте пакетите",
-    active: [
-      {
-        title: "Търговски документи и фактуриране",
-        description:
-          "Издавайте фактури, проформи и кредитни известия за секунди, с автоматична номерация, правилен ДДС и директна връзка към счетоводния дневник. Поддържа номенклатура на артикули/услуги, ценови листи и шаблони за документи. Проформата се превръща в окончателна фактура с един клик. BGN, EUR и всяка друга валута.",
-        tags: ["Автоматична номерация", "ДДС", "Проформи", "Многовалутно"],
-        benefit: "Без двойно въвеждане. Всяка фактура постъпва директно в дневника за продажби.",
-      },
-      {
-        title: "Вземания от клиенти (AR)",
-        description:
-          "Дневник на продажбите, неплатени фактури, падежи и просрочия. Управление на аванси, частични плащания, кредитни известия и приспадания, с 360-градусово проследяване на всеки клиент. Автоматично маркиране на просрочени задължения.",
-        tags: ["Aging report", "Автоматично маркиране", "Пълна история"],
-        benefit: "Виждате кой дължи и кога. Пълна история по клиент, аванси, фактури, плащания, приспадания.",
-      },
-      {
-        title: "Задължения към доставчици (AP)",
-        description:
-          "Въвеждане на покупки, управление на аванси, неплатени задължения и падежи. Разпределение на плащания и доставки по документи, с пълна проследимост към дневника за покупки.",
-        tags: ["Покупки", "Аванси", "Падежи"],
-        benefit: "Пълен контрол върху това какво дължите и кога изтича срокът.",
-      },
-      {
-        title: "Сметкоплан",
-        description:
-          "Конфигурируем сметкоплан по НСС или МСФО, предварително структуриран по групи 1–9. Аналитичности, начални салда, импорт от съществуваща система или конфигурация от нулата.",
-        tags: ["НСС", "МСФО", "Аналитичности", "Импорт"],
-        benefit: "Сметкопланът идва предварително структуриран по НСС, готов за работа веднага след настройката.",
-      },
-      {
-        title: "Главна книга и оборотна ведомост",
-        description:
-          "Пълно двойно счетоводство, всяка операция постъпва автоматично в съответните сметки. Оборотна ведомост, хронологичен журнал, аналитични регистри и всички стандартни счетоводни справки.",
-        tags: ["Двойно счетоводство", "Оборотна ведомост"],
-        benefit: "Оборотната ведомост е на едно кликване. Всяка операция, проследима до изходния документ.",
-      },
-      {
-        title: "Банка и каса",
-        description:
-          "Качете банково извлечение в CSV или XML формат и системата съпоставя транзакциите. Множество банкови сметки и каси в едно работно пространство. Генериране на платежни нареждания в XML.",
-        tags: ["Банков импорт", "Съпоставяне", "XML платежни"],
-        benefit: "Множество сметки и каси, едно работно пространство.",
-      },
-      {
-        title: "ДДС и данъчна отчетност",
-        description:
-          "Автоматични дневници за продажби и покупки, Справка-декларация ЗДДС и VIES декларация, готови за НАП. Генерират се от данните на фактурите, без ръчно попълване. Поддържа Годишната данъчна декларация (ГДД).",
-        tags: ["Справка-декларация ЗДДС", "VIES декларация", "НАП формат"],
-        benefit: "ДДС, VIES и Годишна данъчна декларация, всичко от едно място, без смяна на инструменти.",
-      },
-      {
-        title: "SAF-T отчетност",
-        description:
-          "Генериране на стандартния одиторски файл за данъчни цели (SAF-T) директно от счетоводните данни, в структурата, изисквана от НАП. Проверка на файла преди подаване и пълна проследимост до изходните документи.",
-        tags: ["SAF-T", "НАП формат", "Валидация"],
-        benefit: "SAF-T файлът се генерира от вече въведените данни, без отделна подготовка и ръчни справки.",
-      },
-      {
-        title: "OCR разпознаване на документи",
-        description:
-          "Качвате PDF или снимка на фактура за покупка и системата разчита доставчик, номер, дата, суми и ДДС, след което предлага готов счетоводен запис за потвърждение. Работи с пакетно качване на много документи наведнъж.",
-        tags: ["OCR", "Пакетно качване", "Автоматични записи"],
-        benefit: "Купчината фактури става осчетоводени документи, вие само преглеждате и потвърждавате.",
-      },
-      {
-        title: "Административна конзола",
-        description:
-          "Управление на множество фирми с роли, права и конфигурация на финансова година. Добавяте нов клиент за минути. Превключвате без изход.",
-        tags: ["Мулти-фирмена", "Роли и права", "Одитен след"],
-        benefit: "Превключвате между клиенти без изход. Всяко действие записано.",
-      },
-    ],
-    upcoming: [
-      {
-        title: "Автоматично банково съпоставяне",
-        description: "Директна банкова връзка чрез open banking. Транзакциите се съпоставят автоматично по правила.",
-      },
-      {
-        title: "Дълготрайни активи и амортизации",
-        description: "Регистър на активите с автоматично начисляване на амортизации. Линеен, регресивен, производствен метод.",
-      },
-      {
-        title: "Заплати и ТРЗ",
-        description: "Заплати, фишове, Декларации Образец 1 и 6, групов превод към НАП.",
-      },
-      {
-        title: "Управление на склад",
-        description:
-          "Наличности, стокови разписки и оценка на запаси, интегрирани с главната книга. FIFO или среднопретеглена цена.",
-      },
-      {
-        title: "API и интеграции",
-        description: "REST API за свързване с ERP, онлайн магазини, банкови системи и вътрешни инструменти.",
-      },
-    ],
   },
   en: {
-    eyebrow: "Product",
-    title: "Product and solutions",
-    lead: "Complete accounting, invoicing and financial management functionality, in a single workspace.",
-    activeEyebrow: "● Available now",
-    activeTitle: "Active modules",
-    activeDesc: "Ready to use from day one. Built around the Bulgarian National Accounting Standards.",
-    soonEyebrow: "⚙ In active development",
-    soonTitle: "Upcoming modules",
-    soonDesc: "Available automatically on release, no extra setup, no migration.",
-    ctaTitle: "Interested? Get in touch.",
+    eyebrow: "Solutions",
+    title: "One place for your documents, your books and VAT.",
+    lead: "Six modules working on the same data. Enter something once — the invoice, the entry, the VAT journal and the report all come from the same record.",
+    activeEyebrow: "Available now",
+    activeTitle: "What you can do in SDM",
+    packageNote: "The scope of some features depends on your plan.",
+    packageLink: "Compare plans",
+    soonEyebrow: "In development",
+    soonTitle: "What's next",
+    soonDesc: "New modules appear in your workspace when they are released — no migration and no new setup.",
+    upcoming: [
+      ["Invoice recognition", "Upload a PDF or a photo of a purchase invoice and get a draft to review."],
+      ["Direct bank connection", "Transactions arrive straight from the bank and are matched by rules."],
+      ["Fixed assets", "An asset register with automatic depreciation."],
+      ["Payroll", "Salaries, payslips and declarations to the NRA."],
+      ["Inventory", "Stock levels, goods receipts and inventory valuation."],
+      ["API and integrations", "Connections to online stores, ERPs and internal systems."],
+    ],
+    ctaTitle: "See SDM with your own data",
     ctaDesc:
-      "We will walk you through the platform, answer your questions and recommend the right plan for your case. 90-day free trial, no credit card required.",
+      "We will walk you through the system, help you move your counterparties and opening balances across, and recommend the right plan. 90 days free, no credit card.",
     ctaPrimary: "Contact us",
     ctaSecondary: "See pricing",
-    active: [
-      {
-        title: "Commercial documents and invoicing",
-        description:
-          "Issue invoices, proformas and credit notes in seconds, with automatic numbering, correct VAT and a direct link to the accounting journal. Supports item and service catalogues, price lists and document templates. A proforma becomes a final invoice in one click. BGN, EUR and any other currency.",
-        tags: ["Automatic numbering", "VAT", "Proformas", "Multi-currency"],
-        benefit: "No double entry. Every invoice lands directly in the sales journal.",
-      },
-      {
-        title: "Accounts receivable (AR)",
-        description:
-          "Sales journal, unpaid invoices, due dates and overdue items. Manage advances, partial payments, credit notes and offsets, with a 360-degree view of every customer. Overdue balances are flagged automatically.",
-        tags: ["Aging report", "Automatic flagging", "Full history"],
-        benefit: "See who owes what and when. Full history per customer, advances, invoices, payments, offsets.",
-      },
-      {
-        title: "Accounts payable (AP)",
-        description:
-          "Record purchases and manage advances, open liabilities and due dates. Allocate payments and deliveries across documents, with full traceability to the purchase journal.",
-        tags: ["Purchases", "Advances", "Due dates"],
-        benefit: "Full control over what you owe and when it falls due.",
-      },
-      {
-        title: "Chart of accounts",
-        description:
-          "A configurable chart of accounts under National Accounting Standards or IFRS, pre-structured into groups 1–9. Analytical accounts, opening balances, import from an existing system or setup from scratch.",
-        tags: ["NAS", "IFRS", "Analytical accounts", "Import"],
-        benefit: "The chart of accounts arrives pre-structured, ready to use as soon as your account is set up.",
-      },
-      {
-        title: "General ledger and trial balance",
-        description:
-          "Full double-entry accounting, every transaction posts automatically to the right accounts. Trial balance, chronological journal, analytical registers and all standard accounting reports.",
-        tags: ["Double-entry", "Trial balance"],
-        benefit: "The trial balance is one click away. Every entry traces back to its source document.",
-      },
-      {
-        title: "Bank and cash",
-        description:
-          "Upload a bank statement in CSV or XML and the system matches the transactions. Multiple bank and cash accounts in one workspace. Generate payment orders in XML.",
-        tags: ["Bank import", "Matching", "XML payments"],
-        benefit: "Multiple accounts and cash desks, one workspace.",
-      },
-      {
-        title: "VAT and tax reporting",
-        description:
-          "Automatic sales and purchase journals, the VAT return and the VIES declaration, ready for the NRA. Generated from your invoice data, no manual entry. Supports the annual corporate tax return.",
-        tags: ["VAT return", "VIES declaration", "NRA format"],
-        benefit: "VAT, VIES and the annual tax return, all in one place, without switching tools.",
-      },
-      {
-        title: "SAF-T reporting",
-        description:
-          "Generate the Standard Audit File for Tax (SAF-T) straight from your accounting data, in the structure required by the NRA. Validate the file before submission with full traceability to the source documents.",
-        tags: ["SAF-T", "NRA format", "Validation"],
-        benefit: "The SAF-T file is generated from data you already entered, no separate preparation or manual reports.",
-      },
-      {
-        title: "OCR document recognition",
-        description:
-          "Upload a PDF or a photo of a purchase invoice and the system reads the supplier, number, date, amounts and VAT, then proposes a ready accounting entry for approval. Works with batch uploads of many documents at once.",
-        tags: ["OCR", "Batch upload", "Automatic entries"],
-        benefit: "A pile of invoices turns into posted documents, you simply review and confirm.",
-      },
-      {
-        title: "Administration console",
-        description:
-          "Manage multiple companies with roles, permissions and financial-year configuration. Add a new client in minutes. Switch without signing out.",
-        tags: ["Multi-company", "Roles and permissions", "Audit trail"],
-        benefit: "Switch between clients without signing out. Every action logged.",
-      },
-    ],
-    upcoming: [
-      {
-        title: "Automatic bank reconciliation",
-        description: "Direct bank connectivity via open banking. Transactions are matched automatically by rules.",
-      },
-      {
-        title: "Fixed assets and depreciation",
-        description: "An asset register with automatic depreciation. Straight-line, reducing balance and units-of-production methods.",
-      },
-      {
-        title: "Payroll and HR",
-        description: "Salaries, payslips, Declarations 1 and 6, and bulk transfers to the NRA.",
-      },
-      {
-        title: "Inventory management",
-        description:
-          "Stock levels, goods receipts and inventory valuation, integrated with the general ledger. FIFO or weighted average cost.",
-      },
-      {
-        title: "API and integrations",
-        description: "A REST API for connecting ERPs, online stores, banking systems and internal tools.",
-      },
-    ],
   },
 };
 
 const Product = () => {
   const t = useT(copy);
+  const { lang } = useLang();
+  const modules = getModules(lang);
 
   return (
     <Layout>
@@ -243,34 +74,34 @@ const Product = () => {
         </div>
       </section>
 
-      <TrustBar />
-
       <section id="modules" className="py-20">
         <div className="container">
-          <SectionHeading eyebrow={t.activeEyebrow} title={t.activeTitle} description={t.activeDesc} />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {t.active.map((m, i) => (
-              <ModuleCard
-                key={m.title}
-                index={i + 1}
-                title={m.title}
-                description={m.description}
-                tags={m.tags}
-                benefit={m.benefit}
-              />
+          <SectionHeading eyebrow={t.activeEyebrow} title={t.activeTitle} />
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {modules.map((m) => (
+              <ModuleCard key={m.title} icon={m.icon} title={m.title} value={m.value} points={m.points} />
             ))}
           </div>
+          <p className="mt-8 text-sm text-muted-foreground">
+            {t.packageNote}{" "}
+            <Link to="/pricing" className="font-medium text-primary underline-offset-4 hover:underline">
+              {t.packageLink}
+            </Link>
+          </p>
         </div>
       </section>
 
       <section className="bg-section py-20">
         <div className="container">
           <SectionHeading eyebrow={t.soonEyebrow} title={t.soonTitle} description={t.soonDesc} />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {t.upcoming.map((m) => (
-              <ModuleCard key={m.title} title={m.title} description={m.description} soon />
+          <dl className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            {t.upcoming.map(([title, desc]) => (
+              <div key={title}>
+                <dt className="font-semibold">{title}</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">{desc}</dd>
+              </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 

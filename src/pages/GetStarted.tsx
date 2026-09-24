@@ -18,7 +18,7 @@ const copy = {
       {
         step: 2,
         title: "Настройте работното пространство",
-        desc: "Въведете данните на фирмата, конфигурирайте сметкоплана и задайте финансовата година. При пакет Практика, добавете всички клиентски фирми.",
+        desc: "Въведете данните на фирмата и създайте фискалната година — сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично. Контрагентите и началните салда можете да заредите от файл. При пакет Бизнес добавете и останалите фирми.",
       },
       {
         step: 3,
@@ -38,11 +38,11 @@ const copy = {
       },
       {
         q: "Мога ли да управлявам множество фирми?",
-        a: "Да, при пакет Практика и Корпоративен. Всяка фирма е напълно изолирана в собствено работно пространство.",
+        a: "Да, при пакетите Бизнес и Корпоративен. Всяка фирма е напълно изолирана в собствено работно пространство.",
       },
       {
         q: "Сигурни ли са данните ми?",
-        a: "Всички данни се съхраняват в европейски дата центрове в пълно съответствие с GDPR. Достъпът е защитен с двуфакторно удостоверяване.",
+        a: "Всички данни се съхраняват в европейски дата центрове в пълно съответствие с GDPR.",
       },
       {
         q: "Какво се случва след пробния период?",
@@ -50,7 +50,7 @@ const copy = {
       },
       {
         q: "Как получавам поддръжка?",
-        a: "Чрез имейл за всички пакети. Пакетите Практика и Корпоративен включват приоритетна поддръжка с гарантирано време за отговор.",
+        a: "Чрез имейл за всички пакети. Пакетите Бизнес и Корпоративен включват приоритетна поддръжка с гарантирано време за отговор.",
       },
     ],
   },
@@ -68,7 +68,7 @@ const copy = {
       {
         step: 2,
         title: "Set up your workspace",
-        desc: "Enter your company details, configure the chart of accounts and set the financial year. On the Practice plan, add all your client companies.",
+        desc: "Enter your company details and create the financial year — the chart of accounts, journals and analytics load automatically. Counterparties and opening balances can be loaded from a file. On the Business plan, add your other companies too.",
       },
       {
         step: 3,
@@ -88,11 +88,11 @@ const copy = {
       },
       {
         q: "Can I manage multiple companies?",
-        a: "Yes, on the Practice and Enterprise plans. Each company is fully isolated in its own workspace.",
+        a: "Yes, on the Business and Enterprise plans. Each company is fully isolated in its own workspace.",
       },
       {
         q: "Is my data secure?",
-        a: "All data is stored in European data centers in full compliance with GDPR. Access is protected with two-factor authentication.",
+        a: "All data is stored in European data centers in full compliance with GDPR.",
       },
       {
         q: "What happens after the trial period?",
@@ -100,7 +100,7 @@ const copy = {
       },
       {
         q: "How do I get support?",
-        a: "Via email on all plans. The Practice and Enterprise plans include priority support with a guaranteed response time.",
+        a: "Via email on all plans. The Business and Enterprise plans include priority support with a guaranteed response time.",
       },
     ],
   },

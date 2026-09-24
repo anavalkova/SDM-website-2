@@ -5,223 +5,148 @@ import SectionHeading from "@/components/site/SectionHeading";
 import ModuleCard from "@/components/site/ModuleCard";
 import TrustBar from "@/components/site/TrustBar";
 import CtaBand from "@/components/site/CtaBand";
-import { useT } from "@/i18n/LanguageProvider";
+import { useLang, useT } from "@/i18n/LanguageProvider";
+import { getModules } from "@/content/modules";
 import heroBg from "@/assets/hero-bg-light.jpg";
-import {
-  FileText,
-  Wallet,
-  ListTree,
-  Landmark,
-  Receipt,
-  SlidersHorizontal,
-  Building2,
-  ShieldCheck,
-  Coins,
-  Globe,
-  Zap,
-  History,
-  ArrowRight,
-  Rocket,
-  Building,
-} from "lucide-react";
+import { ListTree, Workflow, Euro, SearchCheck, ShieldCheck, Cloud, Rocket, Building, Landmark } from "lucide-react";
 
-const moduleIcons = [FileText, Wallet, ListTree, Landmark, Receipt, SlidersHorizontal];
-const reasonIcons = [Building2, ShieldCheck, Coins, Globe, Zap, History];
+const reasonIcons = [ListTree, Workflow, Euro, SearchCheck, ShieldCheck, Cloud];
 const audienceIcons = [Building, Rocket, Landmark];
-const audienceLinks = ["/product", "/pricing", "/contact"];
 
 const copy = {
   bg: {
-    badge: "Готово за НАП от първия ден · Изградено по НСС",
+    badge: "В евро · По НСС · Готово за НАП",
     titleA: "Всичко започва с",
     titleB: "правилните данни.",
-    lead: "Smart Data Management е цялостна облачна платформа за счетоводство, фактуриране, финансово управление и свързаните организационни, административни и търговски процеси, изградена специално за Националните счетоводни стандарти на България.",
+    lead: "Фактура, статия, дневник за ДДС и справка-декларация — от един запис, в една облачна система, изградена за българските счетоводни стандарти.",
     ctaPrimary: "Започнете безплатно, 90 дни",
     ctaSecondary: "Разгледайте функциите",
-    note: "Без кредитна карта · Без инсталация · Персонално въвеждане от наш екип",
-    modulesEyebrow: "Модули",
-    modulesTitle: "Всичко необходимо за вашето счетоводство",
-    modulesDesc:
-      "Всеки модул работи заедно в единно работно пространство. По-малко ръчна работа, пълна прозрачност в реално време.",
-    whyEyebrow: "Защо SDM",
-    whyTitle: "Защо Smart Data Management?",
-    whyDesc:
-      "Пазарът е разделен между остарели десктоп системи и международни инструменти, непригодени за местното законодателство. SDM запълва точно тази празнина.",
-    audienceEyebrow: "За кого",
-    audienceTitle: "За кого е Smart Data Management?",
-    audienceDesc:
-      "SDM е за собственици и мениджъри, които искат пълен контрол върху финансите на своята фирма, в реално време, без да разчитат на трети страни за всяка справка.",
-    ctaBandSecondary: "Вижте пакетите",
-    modules: [
-      {
-        title: "Търговски документи и фактуриране",
-        description:
-          "Фактури, проформи и кредитни известия за секунди. Автоматична номерация, правилен ДДС, директна връзка към счетоводния дневник. Без двойно въвеждане.",
-      },
-      {
-        title: "Вземания от клиенти",
-        description:
-          "Следете просрочените задължения, управлявайте падежите и авансите. Виждате кой дължи и кога, 360-градусова история по клиент.",
-      },
-      {
-        title: "Сметкоплан",
-        description:
-          "Конфигурируем сметкоплан по НСС или МСФО. Предварително структуриран по групи 1–9. Аналитичности, начални салда, импорт или конфигурация от нулата.",
-      },
-      {
-        title: "Банка и каса",
-        description:
-          "Качете банково извлечение и системата съпоставя транзакциите. Множество банкови сметки, в едно работно пространство.",
-      },
-      {
-        title: "ДДС, SAF-T и данъчна отчетност",
-        description:
-          "Автоматични дневници. Справка-декларация ЗДДС, VIES, SAF-T и Годишна данъчна декларация, готови за НАП. Без ръчно попълване.",
-      },
-      {
-        title: "Административна конзола",
-        description:
-          "Управление на множество фирми с роли, права и финансови години. Превключване без изход.",
-      },
+    note: "Без кредитна карта · Без инсталация · Помагаме ви с настройката",
+    flowEyebrow: "Как работи",
+    flowTitle: "От документа до декларацията",
+    flow: [
+      ["Настройвате фирмата", "Създавате фискалната година — сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично."],
+      ["Въвеждате документите", "Издавате фактури и въвеждате покупки, банка и каса. Системата предлага статията."],
+      ["Осчетоводявате", "Един бутон — и документът е в главната книга, в справките и в дневника за ДДС."],
+      ["Подавате", "Справката-декларация по ЗДДС и VIES декларацията се генерират от вече въведените данни."],
     ],
+    modulesEyebrow: "Модули",
+    modulesTitle: "Шест модула, едни и същи данни",
+    modulesDesc: "Нищо не се въвежда два пъти. Всеки модул чете и допълва записите на останалите.",
+    whyEyebrow: "Защо SDM",
+    whyTitle: "Счетоводство, което започва подредено",
+    whyDesc:
+      "Старите десктоп системи искат инсталация и поддръжка. Международните инструменти не познават НСС и НАП. SDM е създаден точно за това между тях.",
+    audienceEyebrow: "За кого",
+    audienceTitle: "За кого е SDM",
+    audienceDesc: "За фирми и счетоводители, които искат да виждат финансите в реално време, без да чакат справка в края на месеца.",
+    ctaBandSecondary: "Вижте пакетите",
     reasons: [
       {
-        title: "Изграден за реалните процеси в бизнеса",
-        desc: "Сметкопланът следва НСС. ДДС дневниците са в правилния НАП формат. VIES декларацията е вградена. Разработван с мисъл за счетоводните, административни и търговски процеси, нищо от това не изисква конфигурация.",
+        title: "Не започвате от нулата",
+        desc: "При създаване на годината сметкопланът по НСС, журналите и системните аналитичности вече са там. Контрагентите и началните салда се зареждат от файл.",
       },
       {
-        title: "Данните на всяка фирма са напълно изолирани",
-        desc: "Всяка фирма в напълно отделено работно пространство, собствен сметкоплан, собствени дневници. Клиентът вижда само своята фирма.",
+        title: "Един запис, всички регистри",
+        desc: "Издадената фактура е едновременно документ, статия в главната книга и ред в дневника за продажбите. Без износ, внос и пренабиране.",
       },
       {
-        title: "Мащабиране без нарастване на разходите",
-        desc: "Конкурентите таксуват на потребител или на фирма. При SDM планът Бизнес е с фиксирана месечна такса за неограничен брой клиентски фирми.",
+        title: "Готово за еврото",
+        desc: "Евро е основната валута още при създаване на годината. Документи в друга валута се въвеждат по курс, а сумите се водят и в двете валути.",
       },
       {
-        title: "Многовалутна работа",
-        desc: "Поддръжка на BGN, EUR и всяка друга валута. Конфигурируем сметкоплан по НСС, МСФО или персонализирана структура.",
+        title: "Всяко число води до документ",
+        desc: "От оборотната ведомост до хронологията — всяка сума се проследява до документа. Осчетоводеният документ не се изтрива; коригира се чрез връщане в чернова.",
       },
       {
-        title: "От фактурата до главната книга, автоматично",
-        desc: "Всяка издадена фактура постъпва директно в дневника за продажби и главната книга. Без износ, без внос, без загуба на данни.",
+        title: "Ясни права, отделни фирми",
+        desc: "Данните на всяка фирма и всяка година се пазят отделно. Роли и права определят кой въвежда, кой осчетоводява и кой само преглежда.",
       },
       {
         title: "Облак с данни в ЕС",
-        desc: "Без инсталация. Без архиви. Данни в европейска инфраструктура, GDPR съвместимост.",
+        desc: "Работите от браузъра, без инсталация и без архиви. Данните се съхраняват в европейска инфраструктура, в съответствие с GDPR.",
       },
     ],
     audiences: [
       {
         title: "Малки и микро фирми",
-        desc: "Издавате фактури, следите плащанията и подавате ДДС, всичко от едно място, без счетоводен софтуер от миналото. Сметкопланът по НСС е вграден, а ние ви помагаме с настройката.",
-        linkLabel: "Научете повече",
+        desc: "Издавате фактури, следите кой ви дължи и подготвяте ДДС отчетността от едно място. Сметкопланът по НСС е вграден, а ние ви помагаме с настройката.",
       },
       {
         title: "Растящи компании",
-        desc: "Когато обемът нараства, SDM расте с вас, повече фактури, повече служители, повече банкови сметки, без да сменяте инструмента. Автоматизирайте рутината и се фокусирайте върху бизнеса.",
-        linkLabel: "Научете повече",
+        desc: "Повече документи, повече потребители, повече банкови сметки — в същата система. Шаблоните поемат повтарящите се операции, а правата пазят реда в екипа.",
       },
       {
-        title: "По-големи компании и корпорации",
-        desc: "Сложни структури с множество звена, строги изисквания за съответствие и нужда от интеграция с ERP или държавни системи. Персонализирана конфигурация, миграция на данни и API свързване.",
-        linkLabel: "Свържете се с нас",
+        title: "Счетоводни кантори и групи фирми",
+        desc: "Няколко фирми в едно работно пространство, с отделни данни и смяна на фирмата без нов вход. За по-сложни структури — персонализиран сметкоплан и аналитичности.",
       },
     ],
   },
   en: {
-    badge: "NRA-ready from day one · Built on National Accounting Standards",
+    badge: "In euro · National Accounting Standards · NRA-ready",
     titleA: "It all starts with",
     titleB: "the right data.",
-    lead: "Smart Data Management is a complete cloud platform for accounting, invoicing, financial management and the organisational, administrative and commercial processes around them, built specifically for the Bulgarian National Accounting Standards.",
+    lead: "Invoice, entry, VAT journal and VAT return — from one record, in one cloud system built for the Bulgarian accounting standards.",
     ctaPrimary: "Start free, 90 days",
     ctaSecondary: "Explore the features",
-    note: "No credit card · No installation · Personal onboarding by our team",
-    modulesEyebrow: "Modules",
-    modulesTitle: "Everything your accounting needs",
-    modulesDesc:
-      "Every module works together in a single workspace. Less manual work, full transparency in real time.",
-    whyEyebrow: "Why SDM",
-    whyTitle: "Why Smart Data Management?",
-    whyDesc:
-      "The market is split between ageing desktop systems and international tools that do not fit local legislation. SDM fills exactly that gap.",
-    audienceEyebrow: "Who it's for",
-    audienceTitle: "Who is Smart Data Management for?",
-    audienceDesc:
-      "SDM is for owners and managers who want full control over their company finances, in real time, without depending on third parties for every report.",
-    ctaBandSecondary: "See pricing",
-    modules: [
-      {
-        title: "Commercial documents and invoicing",
-        description:
-          "Invoices, proformas and credit notes in seconds. Automatic numbering, correct VAT, a direct link to the accounting journal. No double entry.",
-      },
-      {
-        title: "Accounts receivable",
-        description:
-          "Track overdue balances, manage due dates and advances. See who owes what and when, a 360-degree history per customer.",
-      },
-      {
-        title: "Chart of accounts",
-        description:
-          "A configurable chart of accounts under National Accounting Standards or IFRS. Pre-structured into groups 1–9. Analytical accounts, opening balances, import or setup from scratch.",
-      },
-      {
-        title: "Bank and cash",
-        description:
-          "Upload a bank statement and the system matches the transactions. Multiple bank accounts, in one workspace.",
-      },
-      {
-        title: "VAT, SAF-T and tax reporting",
-        description:
-          "Automatic journals. VAT return, VIES, SAF-T and the annual tax return, ready for the NRA. No manual entry.",
-      },
-      {
-        title: "Administration console",
-        description:
-          "Manage multiple companies with roles, permissions and financial years. Switch without signing out.",
-      },
+    note: "No credit card · No installation · We help you set up",
+    flowEyebrow: "How it works",
+    flowTitle: "From document to declaration",
+    flow: [
+      ["Set up the company", "Create the financial year — the chart of accounts, journals and analytics are loaded automatically."],
+      ["Enter your documents", "Issue invoices and record purchases, bank and cash. The system proposes the entry."],
+      ["Post", "One button and the document is in the general ledger, the reports and the VAT journal."],
+      ["File", "The VAT return and the VIES declaration are generated from the data you already entered."],
     ],
+    modulesEyebrow: "Modules",
+    modulesTitle: "Six modules, the same data",
+    modulesDesc: "Nothing is entered twice. Every module reads and extends the records of the others.",
+    whyEyebrow: "Why SDM",
+    whyTitle: "Accounting that starts in order",
+    whyDesc:
+      "Old desktop systems need installing and maintaining. International tools don't know the local standards or the NRA. SDM is built for exactly the space in between.",
+    audienceEyebrow: "Who it's for",
+    audienceTitle: "Who SDM is for",
+    audienceDesc: "For companies and accountants who want to see their finances in real time, without waiting for a month-end report.",
+    ctaBandSecondary: "See pricing",
     reasons: [
       {
-        title: "Built around how businesses actually work",
-        desc: "The chart of accounts follows the National Accounting Standards. VAT journals come in the correct NRA format. The VIES declaration is built in. Designed around real accounting, administrative and commercial processes, none of it needs configuring.",
+        title: "You don't start from zero",
+        desc: "When the year is created, the chart of accounts, journals and system analytics are already there. Counterparties and opening balances load from a file.",
       },
       {
-        title: "Every company's data is fully isolated",
-        desc: "Each company lives in a completely separate workspace, its own chart of accounts, its own journals. A client only ever sees their own company.",
+        title: "One record, every register",
+        desc: "An issued invoice is at once a document, a general-ledger entry and a line in the sales VAT journal. No exports, imports or re-typing.",
       },
       {
-        title: "Scale without scaling costs",
-        desc: "Competitors charge per user or per company. With SDM the Business plan is a fixed monthly fee for an unlimited number of client companies.",
+        title: "Ready for the euro",
+        desc: "Euro is the base currency from the moment the year is created. Documents in other currencies are entered at a rate and kept in both currencies.",
       },
       {
-        title: "Multi-currency operations",
-        desc: "Support for BGN, EUR and any other currency. A configurable chart of accounts under NAS, IFRS or a custom structure.",
+        title: "Every number leads to a document",
+        desc: "From the trial balance to the chronology, every amount traces back to its document. A posted document is never deleted; it is corrected by returning it to draft.",
       },
       {
-        title: "From invoice to general ledger, automatically",
-        desc: "Every invoice you issue posts straight into the sales journal and the general ledger. No exports, no imports, no lost data.",
+        title: "Clear permissions, separate companies",
+        desc: "Each company's and each year's data is kept separately. Roles and permissions decide who enters, who posts and who only views.",
       },
       {
         title: "EU-hosted cloud",
-        desc: "No installation. No backups to manage. Data in European infrastructure, GDPR compliant.",
+        desc: "Work in the browser, with no installation and no backups to manage. Data is stored on European infrastructure, GDPR compliant.",
       },
     ],
     audiences: [
       {
         title: "Small and micro companies",
-        desc: "Issue invoices, track payments and file VAT, all from one place, without accounting software from another era. The NAS chart of accounts is built in, and we help you set everything up.",
-        linkLabel: "Learn more",
+        desc: "Issue invoices, see who owes you and prepare your VAT reporting from one place. The chart of accounts is built in, and we help you set up.",
       },
       {
         title: "Growing companies",
-        desc: "As volume grows, SDM grows with you, more invoices, more employees, more bank accounts, without switching tools. Automate the routine and focus on the business.",
-        linkLabel: "Learn more",
+        desc: "More documents, more users, more bank accounts — in the same system. Templates take over repeat operations and permissions keep the team in order.",
       },
       {
-        title: "Larger companies and corporations",
-        desc: "Complex structures with multiple units, strict compliance requirements and the need to integrate with ERP or government systems. Custom configuration, data migration and API connectivity.",
-        linkLabel: "Contact us",
+        title: "Accounting firms and company groups",
+        desc: "Several companies in one workspace, with separate data and switching without signing in again. For complex structures — a custom chart of accounts and analytics.",
       },
     ],
   },
@@ -229,6 +154,8 @@ const copy = {
 
 const Index = () => {
   const t = useT(copy);
+  const { lang } = useLang();
+  const modules = getModules(lang);
 
   return (
     <Layout>
@@ -271,8 +198,24 @@ const Index = () => {
 
       <TrustBar />
 
-      {/* Modules */}
+      {/* From document to declaration */}
       <section className="py-20">
+        <div className="container">
+          <SectionHeading align="center" eyebrow={t.flowEyebrow} title={t.flowTitle} />
+          <ol className="mx-auto mt-12 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {t.flow.map(([title, desc], i) => (
+              <li key={title}>
+                <span className="num-badge">{i + 1}</span>
+                <h3 className="mt-4 font-semibold">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Modules */}
+      <section className="bg-section py-20">
         <div className="container">
           <SectionHeading
             align="center"
@@ -281,15 +224,15 @@ const Index = () => {
             description={t.modulesDesc}
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {t.modules.map((m, i) => (
-              <ModuleCard key={m.title} icon={moduleIcons[i]} title={m.title} description={m.description} />
+            {modules.map((m) => (
+              <ModuleCard key={m.title} icon={m.icon} title={m.title} value={m.value} />
             ))}
           </div>
         </div>
       </section>
 
       {/* Why SDM */}
-      <section className="bg-section py-20">
+      <section className="py-20">
         <div className="container">
           <SectionHeading align="center" eyebrow={t.whyEyebrow} title={t.whyTitle} description={t.whyDesc} />
           <div className="mx-auto mt-12 grid max-w-5xl gap-x-10 gap-y-8 sm:grid-cols-2">
@@ -310,7 +253,7 @@ const Index = () => {
       </section>
 
       {/* Audiences */}
-      <section className="py-20">
+      <section className="bg-section py-20">
         <div className="container">
           <SectionHeading
             align="center"
