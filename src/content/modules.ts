@@ -31,6 +31,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
         "Журнали за доставчици, клиенти, банка, каса и мемориални ордери",
         "Статии 1:1 или една сметка срещу много насрещни",
         "Шаблони за операциите, които се повтарят всеки месец",
+        "Разпознаване на фактури за покупка от PDF или снимка, с готова чернова за преглед",
         "Импорт на банкови извлечения",
       ],
     },
@@ -46,11 +47,12 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "ДДС и НАП",
-      value: "Дневниците за продажби и покупки се попълват от въведените документи.",
+      value: "Дневниците за ДДС и SAF-T файлът се изготвят от въведените документи.",
       points: [
         "Дневник на продажбите и дневник на покупките",
         "Справка-декларация по ЗДДС и VIES декларация",
         "Подготовка за подаване към НАП от системата",
+        "Месечен SAF-T файл за НАП",
         "Проверка на контрагент във VIES и в Търговския регистър",
       ],
     },
@@ -93,6 +95,7 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
         "Journals for suppliers, customers, bank, cash and memorial orders",
         "1:1 entries or one account against many",
         "Templates for the operations you repeat every month",
+        "Purchase invoice recognition from a PDF or photo, with a draft ready to review",
         "Bank statement import",
       ],
     },
@@ -108,11 +111,12 @@ const text: Record<Lang, Omit<Module, "icon">[]> = {
     },
     {
       title: "VAT and the NRA",
-      value: "The sales and purchase VAT journals are filled in from your documents.",
+      value: "The VAT journals and the SAF-T file are prepared from your documents.",
       points: [
         "Sales and purchase VAT journals",
         "VAT return and VIES declaration",
         "Preparation for submission to the NRA from inside the system",
+        "Monthly SAF-T file for the NRA",
         "Counterparty checks in VIES and the Commercial Register",
       ],
     },

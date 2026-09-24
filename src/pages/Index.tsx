@@ -26,9 +26,9 @@ const copy = {
     flowTitle: "Как протича работата",
     flow: [
       ["Настройвате фирмата", "Създавате фискалната година и получавате готов сметкоплан по НСС, журнали и аналитичности. Остава само да ги прегледате и допълните."],
-      ["Въвеждате документите", "Издавате фактури, въвеждате покупки, банкови и касови операции. За всеки документ системата предлага статия, която можете да промените."],
+      ["Въвеждате документите", "Издавате фактури и въвеждате покупки, банкови и касови операции. Фактурите за покупка може да качите като PDF или снимка, а системата предлага статия за всеки документ."],
       ["Осчетоводявате", "Когато документът е готов, го осчетоводявате и той веднага се отразява в главната книга, справките и дневника за ДДС."],
-      ["Подготвяте декларациите", "Справката-декларация по ЗДДС и VIES декларацията се изготвят от въведените документи, без да пренабирате данни."],
+      ["Подготвяте декларациите", "Справката-декларация по ЗДДС, VIES декларацията и месечният SAF-T файл се изготвят от въведените документи, без да пренабирате данни."],
     ],
     modulesEyebrow: "Модули",
     modulesTitle: "Какво включва системата",
@@ -94,9 +94,9 @@ const copy = {
     flowTitle: "How the work goes",
     flow: [
       ["Set up the company", "Create the financial year and you get a ready chart of accounts, journals and analytics. All that is left is to review and extend them."],
-      ["Enter your documents", "Issue invoices and record purchases, bank and cash operations. For each document the system suggests an entry you can change."],
+      ["Enter your documents", "Issue invoices and record purchases, bank and cash operations. Purchase invoices can be uploaded as a PDF or photo, and the system suggests an entry for every document."],
       ["Post", "When a document is ready, you post it and it shows up straight away in the general ledger, the reports and the VAT journal."],
-      ["Prepare the returns", "The VAT return and the VIES declaration are prepared from the documents you entered, with no retyping."],
+      ["Prepare the returns", "The VAT return, the VIES declaration and the monthly SAF-T file are prepared from the documents you entered, with no retyping."],
     ],
     modulesEyebrow: "Modules",
     modulesTitle: "What the system covers",
