@@ -39,7 +39,7 @@ const copy = {
       "Старите десктоп системи искат инсталация и поддръжка. Международните инструменти не познават НСС и НАП. SDM е създаден точно за това между тях.",
     audienceEyebrow: "За кого",
     audienceTitle: "За кого е SDM",
-    audienceDesc: "За фирми и счетоводители, които искат да виждат финансите в реално време, без да чакат справка в края на месеца.",
+    audienceDesc: "За собственици и финансови екипи, които искат да виждат финансите в реално време, без да чакат справка в края на месеца.",
     ctaBandSecondary: "Вижте пакетите",
     reasons: [
       {
@@ -77,8 +77,8 @@ const copy = {
         desc: "Повече документи, повече потребители, повече банкови сметки, в същата система. Шаблоните поемат повтарящите се операции, а правата пазят реда в екипа.",
       },
       {
-        title: "Счетоводни кантори и групи фирми",
-        desc: "Няколко фирми в едно работно пространство, с отделни данни и смяна на фирмата без нов вход. За по-сложни структури има персонализиран сметкоплан и аналитичности.",
+        title: "По-големи компании",
+        desc: "Повече фирми, повече звена и по-строги изисквания към отчетността. Корпоративният пакет включва неограничен брой фирми, персонализиран сметкоплан и аналитичности, сметкоплан по МСФО и приоритетна поддръжка.",
       },
     ],
   },
@@ -107,7 +107,7 @@ const copy = {
       "Old desktop systems need installing and maintaining. International tools don't know the local standards or the NRA. SDM is built for exactly the space in between.",
     audienceEyebrow: "Who it's for",
     audienceTitle: "Who SDM is for",
-    audienceDesc: "For companies and accountants who want to see their finances in real time, without waiting for a month-end report.",
+    audienceDesc: "For owners and finance teams who want to see their finances in real time, without waiting for a month-end report.",
     ctaBandSecondary: "See pricing",
     reasons: [
       {
@@ -145,8 +145,8 @@ const copy = {
         desc: "More documents, more users, more bank accounts, all in the same system. Templates take over repeat operations and permissions keep the team in order.",
       },
       {
-        title: "Accounting firms and company groups",
-        desc: "Several companies in one workspace, with separate data and switching without signing in again. Complex structures get a custom chart of accounts and analytics.",
+        title: "Larger companies",
+        desc: "More companies, more units and stricter reporting requirements. The Enterprise plan includes unlimited companies, a custom chart of accounts and analytics, an IFRS chart of accounts and priority support.",
       },
     ],
   },
