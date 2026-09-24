@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sdm-website-2",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    // React Router: serve index.html for unknown paths so deep links work
+    "not_found_handling": "single-page-application"
+  }
+}
