@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/site/SectionHeading";
 import ModuleCard from "@/components/site/ModuleCard";
@@ -16,28 +15,9 @@ const copy = {
     activeTitle: "Какво можете да правите в SDM",
     packageNote: "Обхватът на някои функции зависи от пакета.",
     packageLink: "Сравнете пакетите",
-    saftEyebrow: "SAF-T",
-    saftTitle: "SAF-T идва и за малките фирми",
-    saftLead:
-      "От 2026 г. НАП въвежда стандартния одитен файл за данъчни цели (SAF-T). Фирмите го подават всеки месец в XML формат, с данни от счетоводството им: записите в главната книга, сметкоплана, контрагентите, фактурите и плащанията.",
-    saftWavesTitle: "Кога става задължително",
-    saftWaves: [
-      ["2026–2027", "Големите предприятия"],
-      ["2028", "Фирмите с годишни приходи над 7,67 млн. евро"],
-      ["2029", "Всички малки и средни предприятия"],
-      ["2030", "Микропредприятията, регистрирани по ЗДДС"],
-    ],
-    saftHaveTitle: "Какво SDM вече води в нужния вид",
-    saftHave: [
-      "Всеки счетоводен запис, свързан с документа, от който идва",
-      "Сметкоплан с начални салда, обороти и крайни салда",
-      "Контрагенти с ЕИК, ДДС номер и държава",
-      "Фактури по редове: артикул, количество, мерна единица, цена и ДДС",
-      "Суми в евро, с оригиналната валута и курса",
-    ],
-    saftNext:
-      "Генерирането на месечния SAF-T файл е в разработка. Така, когато задължението стигне до вашата фирма, файлът ще се изготвя от данните, които вече въвеждате.",
-    saftSource: "Сроковете са по ДОПК и указанията на НАП. Проверете кога е вашият ред при своя счетоводител.",
+    saftTitle: "Подготвени за SAF-T",
+    saftText:
+      "SAF-T е новият месечен одитен файл, който фирмите подават към НАП. SDM ще изготвя файла директно от въведените документи и записи, без отделна подготовка.",
     soonEyebrow: "В разработка",
     soonTitle: "Какво предстои",
     soonDesc: "Когато нов модул е готов, той се появява във вашата система. Не е нужно да прехвърляте данни или да настройвате нещо отначало.",
@@ -64,28 +44,9 @@ const copy = {
     activeTitle: "What you can do in SDM",
     packageNote: "The scope of some features depends on your plan.",
     packageLink: "Compare plans",
-    saftEyebrow: "SAF-T",
-    saftTitle: "SAF-T is coming for small companies too",
-    saftLead:
-      "From 2026 the Bulgarian NRA is introducing the Standard Audit File for Tax (SAF-T). Companies submit it every month in XML, with data from their accounting: general-ledger entries, the chart of accounts, counterparties, invoices and payments.",
-    saftWavesTitle: "When it becomes mandatory",
-    saftWaves: [
-      ["2026–2027", "Large enterprises"],
-      ["2028", "Companies with annual revenue above EUR 7.67 million"],
-      ["2029", "All small and medium-sized enterprises"],
-      ["2030", "VAT-registered micro-enterprises"],
-    ],
-    saftHaveTitle: "What SDM already keeps in the right shape",
-    saftHave: [
-      "Every accounting entry, linked to the document it came from",
-      "A chart of accounts with opening balances, turnover and closing balances",
-      "Counterparties with company ID, VAT number and country",
-      "Invoices line by line: item, quantity, unit, price and VAT",
-      "Amounts in euro, with the original currency and rate",
-    ],
-    saftNext:
-      "Generating the monthly SAF-T file is in development, so when the obligation reaches your company, the file will be produced from the data you already enter.",
-    saftSource: "Deadlines follow the Tax and Social Insurance Procedure Code and NRA guidance. Check with your accountant when your turn comes.",
+    saftTitle: "Ready for SAF-T",
+    saftText:
+      "SAF-T is the new monthly audit file that companies submit to the NRA. SDM will produce the file directly from the documents and entries you have entered, with no separate preparation.",
     soonEyebrow: "In development",
     soonTitle: "What's next",
     soonDesc: "When a new module is ready, it appears in your system. You don't need to move data or set anything up again.",
@@ -138,32 +99,11 @@ const Product = () => {
         </div>
       </section>
 
-      <section className="border-t border-border py-20">
-        <div className="container grid gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <div>
-            <SectionHeading eyebrow={t.saftEyebrow} title={t.saftTitle} description={t.saftLead} />
-            <h3 className="mt-10 font-semibold">{t.saftWavesTitle}</h3>
-            <dl className="mt-4 divide-y divide-border border-y border-border">
-              {t.saftWaves.map(([year, who]) => (
-                <div key={year} className="flex gap-6 py-3 text-sm">
-                  <dt className="w-24 flex-shrink-0 font-semibold text-primary">{year}</dt>
-                  <dd className="text-muted-foreground">{who}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{t.saftSource}</p>
-          </div>
-          <div className="self-start rounded-md border border-panel-border bg-card p-7 shadow-panel">
-            <h3 className="font-semibold">{t.saftHaveTitle}</h3>
-            <ul className="mt-5 space-y-2.5">
-              {t.saftHave.map((item) => (
-                <li key={item} className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground">
-                  <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-green" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-foreground/80">{t.saftNext}</p>
+      <section className="border-t border-border py-16">
+        <div className="container">
+          <div className="max-w-3xl border-l-[3px] border-brand pl-6">
+            <h2 className="font-display text-2xl">{t.saftTitle}</h2>
+            <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{t.saftText}</p>
           </div>
         </div>
       </section>

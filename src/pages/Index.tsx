@@ -19,9 +19,9 @@ const copy = {
     titleA: "Всичко започва с",
     titleB: "правилните данни.",
     lead: "Издавате фактура и системата сама съставя статията, попълва дневника за продажбите и подготвя данните за справка-декларацията. Работите в браузъра, по българските счетоводни стандарти.",
-    ctaPrimary: "Започнете безплатно, 90 дни",
+    ctaPrimary: "Опитайте 90 дни безплатно",
     ctaSecondary: "Разгледайте функциите",
-    note: "Без кредитна карта · Без инсталация · Помагаме ви с настройката",
+    note: "Без инсталация · Помагаме ви с настройката",
     flowEyebrow: "Стъпка по стъпка",
     flowTitle: "Как протича работата",
     flow: [
@@ -87,9 +87,9 @@ const copy = {
     titleA: "It all starts with",
     titleB: "the right data.",
     lead: "Issue an invoice and the system writes the entry, fills in the sales VAT journal and prepares the data for your VAT return. It runs in the browser and follows the Bulgarian accounting standards.",
-    ctaPrimary: "Start free, 90 days",
+    ctaPrimary: "Try it free for 90 days",
     ctaSecondary: "Explore the features",
-    note: "No credit card · No installation · We help you set up",
+    note: "No installation · We help you set up",
     flowEyebrow: "Step by step",
     flowTitle: "How the work goes",
     flow: [
