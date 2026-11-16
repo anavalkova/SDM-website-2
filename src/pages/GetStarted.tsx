@@ -7,18 +7,18 @@ const copy = {
   bg: {
     eyebrow: "Как работи",
     heading: "Как да започнете",
-    intro: "Четири стъпки от регистрацията до първия издаден документ.",
+    intro: "Четири стъпки от първия контакт до първия издаден документ.",
     faqHeading: "Често задавани въпроси",
     steps: [
       {
         step: 1,
-        title: "Създайте акаунт",
-        desc: "Регистрирайте се с имейл, изберете пакет и потвърдете акаунта си. Отнема под три минути.",
+        title: "Свържете се с нас",
+        desc: "Пишете ни през формата за контакт. Ще се свържем с вас, ще ви покажем системата и ще създадем акаунта ви.",
       },
       {
         step: 2,
         title: "Настройте работното пространство",
-        desc: "Въведете данните на фирмата и създайте фискалната година. Сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично. Контрагентите и началните салда можете да заредите от файл. При пакет Бизнес добавете и останалите фирми.",
+        desc: "Въведете данните на фирмата и създайте фискалната година. Сметкопланът по НСС, журналите и аналитичностите се зареждат автоматично. Контрагентите и началните салда можете да заредите от файл. Ако работите с няколко фирми, добавете и тях.",
       },
       {
         step: 3,
@@ -33,42 +33,34 @@ const copy = {
     ],
     faqs: [
       {
-        q: "Мога ли да сменя пакета по-късно?",
-        a: "Да. Надграждате или понижавате пакета по всяко време от настройките на акаунта. Промяната влиза в сила от следващия платежен период.",
-      },
-      {
         q: "Мога ли да управлявам множество фирми?",
-        a: "Да, при пакетите Бизнес и Корпоративен. Всяка фирма е напълно изолирана в собствено работно пространство.",
+        a: "Да. Всяка фирма е напълно изолирана в собствено работно пространство.",
       },
       {
         q: "Сигурни ли са данните ми?",
         a: "Всички данни се съхраняват в европейски дата центрове в пълно съответствие с GDPR.",
       },
       {
-        q: "Какво се случва след пробния период?",
-        a: "Изберете пакет и въведете данни за плащане. Ако не го направите, акаунтът преминава в режим само за четене, данните се запазват.",
-      },
-      {
         q: "Как получавам поддръжка?",
-        a: "Чрез имейл за всички пакети. Пакетите Бизнес и Корпоративен включват приоритетна поддръжка с гарантирано време за отговор.",
+        a: "Пишете ни на имейл или през формата за контакт. Отговаряме в рамките на един работен ден.",
       },
     ],
   },
   en: {
     eyebrow: "How it works",
     heading: "How to get started",
-    intro: "Four steps from signing up to your first issued document.",
+    intro: "Four steps from first contact to your first issued document.",
     faqHeading: "Frequently asked questions",
     steps: [
       {
         step: 1,
-        title: "Create an account",
-        desc: "Sign up with your email, choose a plan and confirm your account. Takes under three minutes.",
+        title: "Get in touch",
+        desc: "Write to us through the contact form. We will get in touch, show you the system and create your account.",
       },
       {
         step: 2,
         title: "Set up your workspace",
-        desc: "Enter your company details and create the financial year. The chart of accounts, journals and analytics load automatically. Counterparties and opening balances can be loaded from a file. On the Business plan, add your other companies too.",
+        desc: "Enter your company details and create the financial year. The chart of accounts, journals and analytics load automatically. Counterparties and opening balances can be loaded from a file. If you work with several companies, add them too.",
       },
       {
         step: 3,
@@ -83,24 +75,16 @@ const copy = {
     ],
     faqs: [
       {
-        q: "Can I change my plan later?",
-        a: "Yes. You can upgrade or downgrade your plan at any time from your account settings. The change takes effect from the next billing period.",
-      },
-      {
         q: "Can I manage multiple companies?",
-        a: "Yes, on the Business and Enterprise plans. Each company is fully isolated in its own workspace.",
+        a: "Yes. Each company is fully isolated in its own workspace.",
       },
       {
         q: "Is my data secure?",
         a: "All data is stored in European data centers in full compliance with GDPR.",
       },
       {
-        q: "What happens after the trial period?",
-        a: "Choose a plan and enter payment details. If you don't, your account switches to read-only mode, your data is preserved.",
-      },
-      {
         q: "How do I get support?",
-        a: "Via email on all plans. The Business and Enterprise plans include priority support with a guaranteed response time.",
+        a: "Write to us by email or through the contact form. We reply within one business day.",
       },
     ],
   },

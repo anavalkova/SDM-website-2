@@ -11,24 +11,20 @@ const copy = {
     links: [
       { label: "Начало", to: "/" },
       { label: "Решения", to: "/product" },
-      { label: "Ценови пакети", to: "/pricing" },
       { label: "За нас", to: "/about" },
-      { label: "Контакт", to: "/contact" },
     ],
     login: "Вход",
-    cta: "Безплатен период",
+    cta: "Свържете се с нас",
     menu: "Меню",
   },
   en: {
     links: [
       { label: "Home", to: "/" },
       { label: "Solutions", to: "/product" },
-      { label: "Pricing", to: "/pricing" },
       { label: "About", to: "/about" },
-      { label: "Contact", to: "/contact" },
     ],
     login: "Sign in",
-    cta: "Free trial",
+    cta: "Contact us",
     menu: "Menu",
   },
 };
@@ -89,7 +85,7 @@ const Navbar = () => {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitch />
           <Button asChild variant="default" size="sm">
-            <Link to="/early-access">{t.cta}</Link>
+            <Link to="/contact">{t.cta}</Link>
           </Button>
         </div>
 
@@ -119,7 +115,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild variant="default" size="sm" className="mt-2">
-              <Link to="/early-access" onClick={() => setMobileOpen(false)}>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>
                 {t.cta}
               </Link>
             </Button>

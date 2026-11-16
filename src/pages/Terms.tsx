@@ -13,7 +13,7 @@ const copy = {
       },
       {
         t: "2. Описание на услугата",
-        d: "Smart Data Management предоставя облачен софтуер за счетоводство, фактуриране и административно управление на абонаментен принцип. Наличните функции зависят от избрания пакет.",
+        d: "Smart Data Management предоставя облачен софтуер за счетоводство, фактуриране и административно управление.",
       },
       {
         t: "3. Потребителски акаунти",
@@ -21,7 +21,7 @@ const copy = {
       },
       {
         t: "4. Фактуриране и плащания",
-        d: "Абонаментните такси се фактурират месечно или годишно според избора при регистрация. Цените могат да бъдат променяни с 30-дневно предизвестие. Възстановяване на суми при годишни абонаменти се разглежда индивидуално.",
+        d: "Таксите и условията за плащане се уговарят индивидуално с всеки клиент.",
       },
       {
         t: "5. Собственост върху данните",
@@ -52,7 +52,7 @@ const copy = {
       },
       {
         t: "2. Description of service",
-        d: "Smart Data Management provides cloud software for accounting, invoicing and administrative management on a subscription basis. Available features depend on the plan selected.",
+        d: "Smart Data Management provides cloud software for accounting, invoicing and administrative management.",
       },
       {
         t: "3. User accounts",
@@ -60,7 +60,7 @@ const copy = {
       },
       {
         t: "4. Billing and payments",
-        d: "Subscription fees are billed monthly or annually depending on the choice made at registration. Prices may be changed with 30 days' notice. Refunds for annual subscriptions are considered on a case-by-case basis.",
+        d: "Fees and payment terms are agreed individually with each customer.",
       },
       {
         t: "5. Data ownership",

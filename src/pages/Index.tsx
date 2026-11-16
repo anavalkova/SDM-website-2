@@ -19,7 +19,7 @@ const copy = {
     titleA: "Всичко започва с",
     titleB: "правилните данни.",
     lead: "Издавате фактура и системата сама съставя статията, попълва дневника за продажбите и подготвя данните за справка-декларацията. Работите в браузъра, по българските счетоводни стандарти.",
-    ctaPrimary: "Опитайте 90 дни безплатно",
+    ctaPrimary: "Свържете се с нас",
     ctaSecondary: "Разгледайте функциите",
     note: "Без инсталация · Помагаме ви с настройката",
     flowEyebrow: "Стъпка по стъпка",
@@ -40,7 +40,6 @@ const copy = {
     audienceEyebrow: "За кого",
     audienceTitle: "За кого е SDM",
     audienceDesc: "За собственици и финансови екипи, които искат да знаят състоянието на фирмата във всеки момент, а не чак след месечното приключване.",
-    ctaBandSecondary: "Вижте пакетите",
     reasons: [
       {
         title: "Не започвате от нулата",
@@ -78,7 +77,7 @@ const copy = {
       },
       {
         title: "По-големи компании",
-        desc: "За групи с няколко фирми и по-сложна отчетност. Корпоративният пакет включва неограничен брой фирми, персонализиран сметкоплан и аналитичности, сметкоплан по МСФО и приоритетна поддръжка.",
+        desc: "За групи с няколко фирми и по-сложна отчетност. Всички фирми са в една система, с персонализиран сметкоплан и аналитичности, включително сметкоплан по МСФО.",
       },
     ],
   },
@@ -87,7 +86,7 @@ const copy = {
     titleA: "It all starts with",
     titleB: "the right data.",
     lead: "Issue an invoice and the system writes the entry, fills in the sales VAT journal and prepares the data for your VAT return. It runs in the browser and follows the Bulgarian accounting standards.",
-    ctaPrimary: "Try it free for 90 days",
+    ctaPrimary: "Contact us",
     ctaSecondary: "Explore the features",
     note: "No installation · We help you set up",
     flowEyebrow: "Step by step",
@@ -108,7 +107,6 @@ const copy = {
     audienceEyebrow: "Who it's for",
     audienceTitle: "Who SDM is for",
     audienceDesc: "For owners and finance teams who want to know where the company stands at any moment, not only after the month is closed.",
-    ctaBandSecondary: "See pricing",
     reasons: [
       {
         title: "You don't start from zero",
@@ -146,7 +144,7 @@ const copy = {
       },
       {
         title: "Larger companies",
-        desc: "For groups with several companies and more complex reporting. The Enterprise plan includes unlimited companies, a custom chart of accounts and analytics, an IFRS chart of accounts and priority support.",
+        desc: "For groups with several companies and more complex reporting. All your companies in one system, with a custom chart of accounts and analytics, including an IFRS chart of accounts.",
       },
     ],
   },
@@ -185,7 +183,7 @@ const Index = () => {
             <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-foreground/75">{t.lead}</p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
               <Button asChild variant="default" size="lg">
-                <Link to="/early-access">{t.ctaPrimary}</Link>
+                <Link to="/contact">{t.ctaPrimary}</Link>
               </Button>
               <Button asChild variant="heroOutline" size="lg">
                 <Link to="/product">{t.ctaSecondary}</Link>
@@ -276,7 +274,7 @@ const Index = () => {
         </div>
       </section>
 
-      <CtaBand secondaryLabel={t.ctaBandSecondary} secondaryTo="/pricing" />
+      <CtaBand />
     </Layout>
   );
 };

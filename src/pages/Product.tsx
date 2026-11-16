@@ -1,20 +1,25 @@
-import { Link } from "react-router-dom";
+import { useMemo } from "react";
 import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/site/SectionHeading";
-import ModuleCard from "@/components/site/ModuleCard";
+import FeatureGroups from "@/components/site/FeatureGroups";
 import CtaBand from "@/components/site/CtaBand";
 import { useLang, useT } from "@/i18n/LanguageProvider";
-import { getModules } from "@/content/modules";
+import { getAdvantages, getFeatureGroups } from "@/content/features";
 
 const copy = {
   bg: {
     eyebrow: "Решения",
     title: "Фактуриране, счетоводство и ДДС в една система",
     lead: "Всеки документ въвеждате веднъж. От него системата съставя статията и попълва дневниците за ДДС и справките.",
+    advEyebrow: "Предимства",
+    advTitle: "Какво отличава SDM",
+    advDesc:
+      "SDM е облачна счетоводна система за малки, растящи и по-големи фирми и за счетоводните кантори, които ги обслужват. В нея водите цялото текущо счетоводство на едно място и по българските стандарти: контрагенти, сметкоплан, фактури, банка, каса, ДДС и справки.",
     activeEyebrow: "Налично сега",
     activeTitle: "Какво можете да правите в SDM",
-    packageNote: "Обхватът на някои функции зависи от пакета.",
-    packageLink: "Сравнете пакетите",
+    activeDesc:
+      "Модулите са подредени в реда, в който обикновено започва работата: от създаването на организацията до първите документи и справки.",
+    navLabel: "Модули",
     saftTitle: "SAF-T директно от системата",
     saftText:
       "SAF-T е новият месечен одитен файл, който фирмите подават към НАП. SDM го изготвя от въведените документи и записи, без отделна подготовка.",
@@ -30,18 +35,22 @@ const copy = {
     ],
     ctaTitle: "Искате ли да видите как работи?",
     ctaDesc:
-      "Ще ви покажем системата, ще ви помогнем да прехвърлите контрагентите и началните салда и ще ви препоръчаме подходящ пакет. Първите 90 дни са безплатни.",
+      "Ще ви покажем системата и ще ви помогнем да прехвърлите контрагентите и началните салда.",
     ctaPrimary: "Свържете се с нас",
-    ctaSecondary: "Вижте пакетите",
   },
   en: {
     eyebrow: "Solutions",
     title: "Invoicing, accounting and VAT in one system",
     lead: "You enter each document once. From it the system writes the entry and fills in the VAT journals and the reports.",
+    advEyebrow: "Advantages",
+    advTitle: "What sets SDM apart",
+    advDesc:
+      "SDM is a cloud accounting system for small, growing and larger companies and for the accounting firms that serve them. It covers all day-to-day bookkeeping in one place, following Bulgarian standards: counterparties, chart of accounts, invoices, bank, cash, VAT and reports.",
     activeEyebrow: "Available now",
     activeTitle: "What you can do in SDM",
-    packageNote: "The scope of some features depends on your plan.",
-    packageLink: "Compare plans",
+    activeDesc:
+      "The modules are listed in the order work usually starts: from creating the organisation to the first documents and reports.",
+    navLabel: "Modules",
     saftTitle: "SAF-T straight from the system",
     saftText:
       "SAF-T is the new monthly audit file that companies submit to the NRA. SDM produces it from the documents and entries you have entered, with no separate preparation.",
@@ -57,16 +66,16 @@ const copy = {
     ],
     ctaTitle: "Want to see how it works?",
     ctaDesc:
-      "We will walk you through the system, help you move your counterparties and opening balances across, and recommend the right plan. The first 90 days are free.",
+      "We will walk you through the system and help you move your counterparties and opening balances across.",
     ctaPrimary: "Contact us",
-    ctaSecondary: "See pricing",
   },
 };
 
 const Product = () => {
   const t = useT(copy);
   const { lang } = useLang();
-  const modules = getModules(lang);
+  const advantages = getAdvantages(lang);
+  const groups = useMemo(() => getFeatureGroups(lang), [lang]);
 
   return (
     <Layout>
@@ -78,20 +87,31 @@ const Product = () => {
         </div>
       </section>
 
-      <section id="modules" className="py-20">
+      {/* Competitive advantages */}
+      <section className="py-20">
         <div className="container">
-          <SectionHeading eyebrow={t.activeEyebrow} title={t.activeTitle} />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {modules.map((m) => (
-              <ModuleCard key={m.title} icon={m.icon} title={m.title} value={m.value} points={m.points} />
+          <SectionHeading eyebrow={t.advEyebrow} title={t.advTitle} description={t.advDesc} />
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {advantages.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex gap-4 border-t-[3px] border-brand bg-card p-7 shadow-panel">
+                <span className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[3px] bg-brand-soft text-brand">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold leading-snug">{title}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{desc}</p>
+                </div>
+              </div>
             ))}
           </div>
-          <p className="mt-8 text-sm text-muted-foreground">
-            {t.packageNote}{" "}
-            <Link to="/pricing" className="font-medium text-primary underline-offset-4 hover:underline">
-              {t.packageLink}
-            </Link>
-          </p>
+        </div>
+      </section>
+
+      {/* Features by module */}
+      <section id="modules" className="scroll-mt-16 bg-section py-20">
+        <div className="container">
+          <SectionHeading eyebrow={t.activeEyebrow} title={t.activeTitle} description={t.activeDesc} />
+          <FeatureGroups groups={groups} navLabel={t.navLabel} />
         </div>
       </section>
 
@@ -123,8 +143,6 @@ const Product = () => {
         description={t.ctaDesc}
         primaryLabel={t.ctaPrimary}
         primaryTo="/contact"
-        secondaryLabel={t.ctaSecondary}
-        secondaryTo="/pricing"
       />
     </Layout>
   );

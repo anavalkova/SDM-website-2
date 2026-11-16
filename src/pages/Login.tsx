@@ -12,7 +12,7 @@ const copy = {
     passwordLabel: "Парола",
     submit: "Вход",
     forgot: "Забравена парола?",
-    requestAccess: "Заявете достъп безплатно",
+    requestAccess: "Нямате акаунт? Свържете се с нас",
     emailRequired: "Моля, въведете имейл адрес.",
     passwordRequired: "Моля, въведете парола.",
     invalid: "Невалиден имейл или парола.",
@@ -24,7 +24,7 @@ const copy = {
     passwordLabel: "Password",
     submit: "Sign in",
     forgot: "Forgot your password?",
-    requestAccess: "Request free access",
+    requestAccess: "No account? Contact us",
     emailRequired: "Please enter your email address.",
     passwordRequired: "Please enter your password.",
     invalid: "Invalid email or password.",
@@ -81,7 +81,7 @@ const Login = () => {
           </form>
           <div className="flex justify-between text-sm text-muted-foreground mt-6">
             <a href="#" className="hover:text-primary">{t.forgot}</a>
-            <Link to="/early-access" className="text-primary hover:underline">{t.requestAccess}</Link>
+            <Link to="/contact" className="text-primary hover:underline">{t.requestAccess}</Link>
           </div>
         </div>
       </div>

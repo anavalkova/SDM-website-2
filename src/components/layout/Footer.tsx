@@ -10,7 +10,6 @@ const copy = {
     legal: "Правно",
     links: {
       overview: "Преглед",
-      pricing: "Ценови пакети",
       modules: "Модули",
       how: "Как работи",
       about: "За нас",
@@ -27,7 +26,6 @@ const copy = {
     legal: "Legal",
     links: {
       overview: "Overview",
-      pricing: "Pricing",
       modules: "Modules",
       how: "How it works",
       about: "About us",
@@ -57,7 +55,6 @@ const Footer = () => {
             <h4 className="eyebrow mb-2 text-primary-foreground/50">{t.product}</h4>
             <ul className="space-y-1 text-[13px] text-primary-foreground/75">
               <li><Link to="/product" className="hover:text-brand">{t.links.overview}</Link></li>
-              <li><Link to="/pricing" className="hover:text-brand">{t.links.pricing}</Link></li>
               <li><Link to="/product#modules" className="hover:text-brand">{t.links.modules}</Link></li>
               <li><Link to="/get-started" className="hover:text-brand">{t.links.how}</Link></li>
             </ul>

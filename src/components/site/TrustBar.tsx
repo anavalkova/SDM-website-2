@@ -4,8 +4,8 @@ import { useT } from "@/i18n/LanguageProvider";
 const icons = [Cloud, Lock, ClipboardCheck, Rocket];
 
 const copy = {
-  bg: ["Изцяло облачно", "Данни в ЕС · GDPR", "НСС и НАП формати", "90-дневен безплатен период"],
-  en: ["Fully cloud-based", "EU data · GDPR", "NAS & NRA formats", "90-day free trial"],
+  bg: ["Изцяло облачно", "Данни в ЕС · GDPR", "НСС и НАП формати", "Помощ при настройката"],
+  en: ["Fully cloud-based", "EU data · GDPR", "NAS & NRA formats", "Help with setup"],
 };
 
 const TrustBar = () => {

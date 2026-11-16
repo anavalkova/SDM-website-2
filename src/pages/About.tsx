@@ -40,13 +40,12 @@ const copy = {
       {
         icon: TrendingUp,
         title: "Без излишна сложност",
-        desc: "Когато фирмата расте, системата трябва да остане също толкова ясна, а разходите предвидими.",
+        desc: "Когато фирмата расте, системата трябва да остане също толкова ясна и лесна за работа.",
       },
     ],
     teamTitle: "Екипът",
     teamDescription:
       "Екипът на SDM се състои от разработчици, счетоводители и консултанти с дългогодишен опит във финансовия сектор на България.",
-    teamComingSoon: "Профили на екипа, скоро",
   },
   en: {
     eyebrow: "About us",
@@ -83,13 +82,12 @@ const copy = {
       {
         icon: TrendingUp,
         title: "No needless complexity",
-        desc: "As a company grows, the system should stay just as clear and the costs predictable.",
+        desc: "As a company grows, the system should stay just as clear and easy to work with.",
       },
     ],
     teamTitle: "The team",
     teamDescription:
       "The SDM team consists of developers, accountants, and consultants with years of experience in Bulgaria's financial sector.",
-    teamComingSoon: "Team profiles, coming soon",
   },
 };
 
@@ -158,9 +156,6 @@ const About = () => {
           <h2 className="font-display text-3xl">{t.teamTitle}</h2>
           <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
             {t.teamDescription}
-          </p>
-          <p className="mt-6 inline-block border border-dashed border-border px-4 py-2 text-sm text-muted-foreground">
-            {t.teamComingSoon}
           </p>
         </div>
       </section>

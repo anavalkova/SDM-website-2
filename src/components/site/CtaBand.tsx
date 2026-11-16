@@ -4,14 +4,14 @@ import { useT } from "@/i18n/LanguageProvider";
 
 const fallback = {
   bg: {
-    title: "Опитайте SDM безплатно",
-    description: "Първите 90 дни са безплатни. Помагаме ви с първоначалната настройка.",
-    primary: "Започнете безплатно",
+    title: "Искате да научите повече?",
+    description: "Свържете се с нас и ще ви покажем как SDM работи за вашата фирма.",
+    primary: "Свържете се с нас",
   },
   en: {
-    title: "Try SDM for free",
-    description: "The first 90 days are free. We help you with the initial setup.",
-    primary: "Start free",
+    title: "Want to know more?",
+    description: "Get in touch and we will show you how SDM works for your company.",
+    primary: "Contact us",
   },
 };
 
@@ -28,7 +28,7 @@ const CtaBand = ({
   title,
   description,
   primaryLabel,
-  primaryTo = "/early-access",
+  primaryTo = "/contact",
   secondaryLabel,
   secondaryTo,
 }: Props) => {
