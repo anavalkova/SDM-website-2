@@ -13,7 +13,6 @@ const copy = {
       { label: "Решения", to: "/product" },
       { label: "За нас", to: "/about" },
     ],
-    login: "Вход",
     cta: "Свържете се с нас",
     menu: "Меню",
   },
@@ -23,7 +22,6 @@ const copy = {
       { label: "Solutions", to: "/product" },
       { label: "About", to: "/about" },
     ],
-    login: "Sign in",
     cta: "Contact us",
     menu: "Menu",
   },
@@ -43,20 +41,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const t = useT(copy);
-
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
-
-  if (isAuthPage) {
-    return (
-      <header className="sticky top-0 z-50 border-b border-panel-border bg-card">
-        <div className="container flex h-16 items-center justify-between">
-          <span className="w-16" />
-          <Logo />
-          <LanguageSwitch className="w-auto" />
-        </div>
-      </header>
-    );
-  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-panel-border bg-card shadow-sm">

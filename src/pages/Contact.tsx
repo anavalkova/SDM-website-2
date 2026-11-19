@@ -1,30 +1,22 @@
-import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { toast } from "@/hooks/use-toast";
-import { Mail, MapPin, Clock, Check } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
+
+// TODO: replace with the real SDM contact address before launch.
+const CONTACT_EMAIL = "info@example.com";
 
 const copy = {
   bg: {
     eyebrow: "Контакт",
     heading: "Свържете се с нас",
     subheading: "Имате въпроси? Искате да заявите демо? Готови сме да помогнем.",
-    formTitle: "Изпратете ни съобщение",
-    sentText: "Благодарим! Получихме съобщението ви и ще отговорим в рамките на един работен ден.",
-    nameLabel: "Вашето име",
-    emailLabel: "Имейл адрес",
-    companyLabel: "Фирма (незадължително)",
-    messageLabel: "Съобщение",
-    submit: "Изпратете съобщение",
-    toastTitle: "Съобщението е изпратено",
-    toastDescription: "Ще се свържем с вас в рамките на един работен ден.",
+    writeTitle: "Пишете ни",
+    writeText: "Изпратете ни имейл с вашия въпрос или заявка за демо и ще отговорим в рамките на един работен ден.",
+    writeButton: "Изпратете имейл",
     contactInfoTitle: "Информация за контакт",
     contactItems: [
-      { icon: Mail, label: "Имейл", value: "info@smartdatamanagement.bg" },
+      { icon: Mail, label: "Имейл", value: CONTACT_EMAIL },
       { icon: MapPin, label: "Адрес", value: "София, България" },
       { icon: Clock, label: "Работно време", value: "Пон–Пет, 9:00–18:00 ч." },
     ],
@@ -36,18 +28,12 @@ const copy = {
     eyebrow: "Contact",
     heading: "Get in touch",
     subheading: "Have questions? Want to request a demo? We're ready to help.",
-    formTitle: "Send us a message",
-    sentText: "Thank you! We've received your message and will reply within one business day.",
-    nameLabel: "Your name",
-    emailLabel: "Email address",
-    companyLabel: "Company (optional)",
-    messageLabel: "Message",
-    submit: "Send message",
-    toastTitle: "Message sent",
-    toastDescription: "We'll get back to you within one business day.",
+    writeTitle: "Write to us",
+    writeText: "Send us an email with your question or demo request and we'll reply within one business day.",
+    writeButton: "Send an email",
     contactInfoTitle: "Contact information",
     contactItems: [
-      { icon: Mail, label: "Email", value: "info@smartdatamanagement.bg" },
+      { icon: Mail, label: "Email", value: CONTACT_EMAIL },
       { icon: MapPin, label: "Address", value: "Sofia, Bulgaria" },
       { icon: Clock, label: "Business hours", value: "Mon–Fri, 9:00 AM–6:00 PM" },
     ],
@@ -59,13 +45,6 @@ const copy = {
 
 const Contact = () => {
   const t = useT(copy);
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    toast({ title: t.toastTitle, description: t.toastDescription });
-  };
 
   return (
     <Layout>
@@ -83,37 +62,18 @@ const Contact = () => {
         <div className="container grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="panel p-3 shadow-panel">
             <div className="panel-inner p-7">
-              <h2 className="mb-6 text-lg font-semibold">{t.formTitle}</h2>
-              {sent ? (
-                <div className="border-l-[3px] border-green bg-green-soft/60 px-5 py-6">
-                  <Check className="mb-2 h-5 w-5 text-green" />
-                  <p className="text-sm text-foreground/80">
-                    {t.sentText}
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <Label htmlFor="name">{t.nameLabel}</Label>
-                    <Input id="name" required className="mt-1.5" />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">{t.emailLabel}</Label>
-                    <Input id="email" type="email" required className="mt-1.5" />
-                  </div>
-                  <div>
-                    <Label htmlFor="company">{t.companyLabel}</Label>
-                    <Input id="company" className="mt-1.5" />
-                  </div>
-                  <div>
-                    <Label htmlFor="message">{t.messageLabel}</Label>
-                    <Textarea id="message" rows={5} required className="mt-1.5" />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    {t.submit}
-                  </Button>
-                </form>
-              )}
+              <Mail className="mb-4 h-6 w-6 text-green" />
+              <h2 className="mb-3 text-lg font-semibold">{t.writeTitle}</h2>
+              <p className="mb-6 max-w-md text-sm leading-relaxed text-muted-foreground">{t.writeText}</p>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="mb-6 block break-all font-display text-2xl text-primary hover:underline"
+              >
+                {CONTACT_EMAIL}
+              </a>
+              <Button asChild size="lg">
+                <a href={`mailto:${CONTACT_EMAIL}`}>{t.writeButton}</a>
+              </Button>
             </div>
           </div>
 
